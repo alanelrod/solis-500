@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NC 500</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background-attachment: fixed; }
+    header.top, main { max-width: 1120px; }
+    .glass {
+      position: relative;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 22px;
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 10px 28px rgba(0, 0, 0, 0.22);
+    }
+    .donut-wrap.glass, .rank-tools.glass { padding: 16px 18px; }
+    .sheet.glass { padding: 6px 14px 18px; margin-top: 14px; }
+    .profile { display: inline-block; margin-top: 10px; background: rgba(94, 234, 212, 0.12); color: #5eead4; border: 1px solid rgba(94, 234, 212, 0.4); text-decoration: none; border-radius: 8px; padding: 8px 14px; font-weight: 700; }
+    .range-title { text-align: center; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .donut-legend { max-height: 280px; overflow: auto; }
+    #donut path, .donut-legend button { cursor: pointer; }
+    .donut-wrap { display: grid; grid-template-columns: 280px 1fr; gap: 22px; align-items: center; margin: 18px 0 8px; }
+    .donut-fig { position: relative; width: 280px; height: 280px; }
+    .donut-fig svg { width: 280px; height: 280px; display: block; }
+    .donut-center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; pointer-events: none; }
+    .donut-center strong { font-size: 28px; letter-spacing: -0.04em; font-weight: 650; }
+    .donut-center span { color: var(--muted); font-size: 12px; }
+    .donut-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+    .donut-legend button {
+      display: flex; justify-content: space-between; gap: 12px; width: 100%;
+      background: transparent; border: 0; color: inherit; padding: 5px 2px; cursor: pointer; text-align: left;
+    }
+    .donut-legend button:hover { color: white; }
+    .swatch { width: 9px; height: 9px; border-radius: 99px; display: inline-block; margin-right: 8px; }
+    .rank-tools { display: grid; grid-template-columns: 1fr 260px; gap: 18px; margin: 14px 0 0; align-items: end; position: relative; z-index: 6; overflow: visible; }
+    .sheet.glass { position: relative; z-index: 1; }
+    .rank-tools label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .rank-tools .search, .group-button { margin: 0; background: rgba(7, 11, 20, 0.4); border: 1px solid rgba(255,255,255,0.2); color: var(--ink); border-radius: 12px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.18); }
+    .group-menu { position: relative; }
+    .group-button { width: 100%; text-align: left; padding: 10px 12px; cursor: pointer; }
+    .group-panel {
+      position: absolute; z-index: 8; right: 0; width: 260px; top: calc(100% + 6px);
+      max-height: 320px; overflow: auto; padding: 8px;
+      background: #10182a;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+    }
+    .group-panel label {
+      display: flex; align-items: center; gap: 8px;
+      text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink);
+      padding: 6px 8px; border-radius: 8px; cursor: pointer;
+    }
+    .group-panel label:hover { background: rgba(255,255,255,0.06); }
+    .group-panel input { accent-color: #5eead4; }
+    .group-panel .group-rule { height: 1px; margin: 6px 8px; background: rgba(255,255,255,0.14); }
+    .industry-head td { padding: 18px 10px 6px; color: #f8fafc; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; font-size: 12px; border-top: 0; }
+    .own.rank th { letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; }
+    .own.rank td { border-bottom: 0; }
+    .own.rank tr.rank-row td { border-top: 1px solid var(--line); cursor: pointer; }
+    .own.rank tr.rank-row:hover td { background: rgba(255,255,255,0.03); }
+    .own.rank td.worth { text-align: right; white-space: nowrap; width: 7.5rem; }
+    .own.rank th.worth { text-align: right; }
+    .own.rank td.worth b { display: block; font-weight: 650; font-variant-numeric: tabular-nums; }
+    .own.rank td.worth span { color: var(--muted); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .own.rank td.worth.provisional span { color: #5eead4; }
+    .own.rank td.worth.priced span { color: #fbbf24; }
+    .rank-name { font-weight: 650; }
+    .rank-panel { display: grid; grid-template-columns: 1.45fr 0.9fr; gap: 28px; padding: 4px 8px 18px 3rem; }
+    .rank-panel p { margin: 0 0 8px; max-width: 68ch; }
+    .rank-panel .tie { color: var(--muted); font-size: 13px; }
+    .range-title { color: var(--muted); font-size: 14px; letter-spacing: 0; text-transform: none; margin-bottom: 4px; }
+    .history-chart { position: relative; }
+    .history-chart svg { width: 100%; height: auto; display: block; }
+    .history-tip {
+      position: absolute; z-index: 2; transform: translate(-50%, -120%);
+      min-width: 76px; padding: 8px 10px; text-align: center; pointer-events: none;
+      background: rgba(8, 12, 22, 0.94); color: #f8fafc;
+      border: 1px solid rgba(255,255,255,0.16); border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    }
+    .history-tip span { display: block; color: #cbd5e1; font-size: 12px; }
+    .history-tip strong { display: block; font-size: 16px; font-weight: 650; }
+    .pos .move { display: block; margin-top: 2px; font-size: 11px; font-weight: 550; color: var(--muted); }
+    .range-labels { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+    @media (max-width: 800px) {
+      .donut-wrap, .rank-panel, .rank-tools { grid-template-columns: 1fr; }
+      .donut-fig { margin: 0 auto; }
+      .rank-panel { padding-left: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="https://rt4access-production.up.railway.app/access/network"><img class="mark" src="logo.png" alt=""> rt4access</a>
+    <nav>
+      <a href="https://rt4access-production.up.railway.app/access/network">Network</a>
+      <a href="https://rt4access-production.up.railway.app/access/">Connections</a>
+      <a href="./" aria-current="page">NC 500</a>
+      <a href="https://rt4access-production.up.railway.app/">Athletics</a>
+      <a href="https://rt4access-production.up.railway.app/map">+ Co. Map</a>
+      <a href="https://rt4access-production.up.railway.app/access/schedule">Calendar</a>
+    </nav>
+  </header>
+  <header class="top">
+    <div>
+      <h1>The Richest People In North Carolina</h1>
+      <div class="sub" id="note"></div>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="donut-wrap glass">
+        <div class="donut-fig">
+          <svg id="donut" viewBox="0 0 220 220" role="img" aria-label="Donut of displayed estimates, richest first"></svg>
+          <div class="donut-center"><strong id="donut-total"></strong><span>Displayed estimates</span></div>
+        </div>
+        <ol class="donut-legend" id="legend"></ol>
+      </div>
+      <div class="rank-tools glass">
+        <input id="q" class="search" aria-label="Search this list" placeholder="Search this list">
+        <label>Group by industry
+          <div class="group-menu">
+            <button type="button" class="group-button" id="group-button" aria-haspopup="true" aria-expanded="false">All industries</button>
+            <div id="group-panel" class="group-panel" hidden>
+              <label><input type="checkbox" id="group-all" checked> All industries</label>
+              <label><input type="checkbox" id="group-headers"> Grouped</label>
+              <div class="group-rule"></div>
+              <div id="group-sectors"></div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="sheet glass">
+      <table class="own rank">
+        <thead>
+          <tr><th>Rank</th><th>Name</th><th>Estimate</th><th>Age</th><th>Region</th><th>Source</th><th>Industry</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const rows = document.querySelector("#rows");
+    const note = document.querySelector("#note");
+    const donut = document.querySelector("#donut");
+    const legend = document.querySelector("#legend");
+    const q = document.querySelector("#q");
+    const groupButton = document.querySelector("#group-button");
+    const groupPanel = document.querySelector("#group-panel");
+    const groupAll = document.querySelector("#group-all");
+    const groupHeaders = document.querySelector("#group-headers");
+    const groupSectors = document.querySelector("#group-sectors");
+    const selectedSectors = new Set();
+    const colors = ["#5eead4", "#22d3ee", "#38bdf8", "#60a5fa", "#818cf8", "#a78bfa", "#2dd4bf", "#67e8f9", "#93c5fd", "#c4b5fd"];
+    const otherColor = "#334155";
+    let ranked = [];
+    let openPos = null;
+    const rowByPos = new Map();
+    function visible(text) {
+      return text
+        .replace(/\bForbes\b/g, "the published list")
+        .replace(/\bbest guess\b/gi, "modeled estimate")
+        .replace(/\breal[ -]time estimates\b/gi, "modeled estimates")
+        .replace(/\breal[ -]time estimate\b/gi, "published figure")
+        .replace(/\bGuesses\b/g, "Modeled estimates")
+        .replace(/\bGuess\b/g, "Modeled estimate");
+    }
+    const TRIANGLE = new Set(["raleigh", "durham", "cary", "chapel hill", "morrisville", "apex", "holly springs", "carrboro", "research triangle park", "research triangle", "rtp", "wake forest", "knightdale", "garner", "hillsborough", "pittsboro"]);
+    const CHARLOTTE = new Set(["charlotte", "eastover", "huntersville", "matthews", "cornelius", "davidson", "mint hill", "pineville", "indian trail", "waxhaw", "belmont", "mount holly", "concord", "kannapolis", "weddington", "harrisburg"]);
+    const PLACES = ["Research Triangle Park", "Research Triangle", "Winston-Salem", "Chapel Hill", "Rocky Mount", "High Point", "New Bern", "Southern Pines", "Holly Springs", "Morehead City", "North Wilkesboro", "Elizabeth City", "Huntersville", "Fayetteville", "Greensboro", "Wilmington", "Asheville", "Charlotte", "Valle Crucis", "Pisgah Forest", "Spring Hope", "Snow Hill", "Rose Hill", "Mount Airy", "Mount Olive", "Mount Holly", "Wake Forest", "Indian Trail", "Fuquay-Varina", "Pinehurst", "Mooresville", "Kannapolis", "Statesville", "Hendersonville", "Jacksonville", "Morrisville", "Greenville", "Goldsboro", "Burlington", "Lexington", "Thomasville", "Kernersville", "Salisbury", "Morganton", "Asheboro", "Lumberton", "Hickory", "Gastonia", "Concord", "Raleigh", "Durham", "Cary", "Apex", "Boone", "Lenoir", "Conover", "Sanford", "Kinston", "Wilson", "Monroe", "Shelby", "Newton Grove", "Newton", "Valdese", "Marion", "Brevard", "Sylva", "Franklin", "Waynesville", "Jefferson", "Nashville", "Lucama", "Oakboro", "Emerald Isle", "Smithfield", "Clayton", "Garner", "Carrboro", "Hillsborough", "Pittsboro", "Mebane", "Graham", "Reidsville", "Albemarle", "Eden", "Matthews", "Cornelius", "Davidson", "Eastover", "Washington", "Pineville", "Belmont", "Lincolnton", "Clinton", "Wallace", "Tarboro", "Oxford", "Hamlet", "Laurinburg", "Aberdeen", "Waxhaw", "Blowing Rock", "Banner Elk", "Four Oaks", "Sandy Ridge", "Rural Hall", "Wilkesboro", "Jamestown", "Troutman", "Shallotte", "Penrose", "Archdale", "Hayesville", "Weddington", "Harrisburg", "Knightdale", "Wade", "Newland", "Littleton", "Burnsville", "Carthage", "Ahoskie", "Elizabethtown", "Salemburg", "Eagle Springs"];
+    PLACES.sort((a, b) => b.length - a.length);
+    const COMPANY_REGION = {
+      "Pamlico Capital": "Charlotte",
+      "Prometheus Group": "RTP",
+      "Smart Choice": "Greensboro",
+      "Joe Van Gogh": "RTP",
+      "Yep Roc and related labels": "RTP",
+      "Salem One": "Winston-Salem",
+      "Passport": "Charlotte",
+      "Glew": "Charlotte",
+      "Armor Fire Services": "Charlotte",
+      "Winston Tractor": "Winston-Salem",
+      "Amerochem": "New Bern",
+      "Jernigan Oil": "Ahoskie",
+      "Smith Oil": "Salemburg",
+      "Campbell Oil": "Elizabethtown",
+      "Williams Sand and Clay": "Eagle Springs",
+      "Fence Builders": "Winston-Salem",
+      "Green Hill Fence": "South Carolina",
+      "Dalco Nonwovens": "Conover",
+      "Alarmguard Security": "Greensboro",
+      "Pesta Finnie": "Charlotte",
+    };
+    function regionName(name) {
+      const key = name.toLowerCase();
+      if (TRIANGLE.has(key)) return "RTP";
+      if (CHARLOTTE.has(key)) return "Charlotte";
+      return name;
+    }
+    function awayState(text) {
+      const match = text.match(/\blives in [^.]{0,80}\b(Florida|Maryland|South Carolina|Virginia|Georgia|Tennessee|Texas|New York|California)\b/i)
+        || text.match(/\bplaces (?:him|her) in [^.]{0,60}\b(Florida|Maryland|South Carolina|Virginia|Georgia|Tennessee|Texas|New York|California)\b/i)
+        || text.match(/\bfiling address is [^.]{0,60}\b(Florida|Maryland|South Carolina|Virginia|Georgia|Tennessee|Texas|New York|California)\b/i);
+      if (!match) return "";
+      const state = match[1].toLowerCase();
+      return state.replace(/\b\w/g, (letter) => letter.toUpperCase());
+    }
+    function placeOf(person) {
+      const text = person.nc_tie || "";
+      const away = awayState(text + " " + (person.valuation_note || ""));
+      if (away) return away;
+      const found = [];
+      for (const name of PLACES) {
+        const pattern = new RegExp("\\b" + name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+        if (pattern.test(text)) {
+          const region = regionName(name);
+          if (!found.includes(region)) found.push(region);
+        }
+      }
+      if (found.includes("Charlotte") && found.includes("RTP")) return "North Carolina";
+      if (found.length) return found[0];
+      if (/triangle-based|research triangle|\bRTP\b|in the Triangle/i.test(text)) return "RTP";
+      const county = text.match(/\b([A-Z][a-z]+(?: [A-Z][a-z]+)?) County\b/);
+      if (county && county[1] !== "North") return county[1] + " County";
+      if (COMPANY_REGION[person.company]) return COMPANY_REGION[person.company];
+      return "North Carolina";
+    }
+    function assignRegions(people) {
+      people.forEach((person) => { person.region = placeOf(person); });
+      const byCompany = new Map();
+      people.forEach((person) => {
+        if (!person.company || person.region === "North Carolina") return;
+        if (!byCompany.has(person.company)) byCompany.set(person.company, new Set());
+        byCompany.get(person.company).add(person.region);
+      });
+      people.forEach((person) => {
+        const regions = byCompany.get(person.company);
+        if (person.region === "North Carolina" && regions && regions.size === 1) person.region = [...regions][0];
+      });
+    }
+    function money(value) {
+      if (value >= 1e9) return "$" + (value / 1e9).toFixed(2).replace(/0$/, "").replace(/\.0$/, "") + "B";
+      return "$" + (value / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    function arc(cx, cy, outer, inner, a0, a1) {
+      const large = a1 - a0 > Math.PI ? 1 : 0;
+      const p = (r, a) => [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+      const [x0, y0] = p(outer, a0);
+      const [x1, y1] = p(outer, a1);
+      const [x2, y2] = p(inner, a1);
+      const [x3, y3] = p(inner, a0);
+      return `M ${x0.toFixed(2)} ${y0.toFixed(2)} A ${outer} ${outer} 0 ${large} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} L ${x2.toFixed(2)} ${y2.toFixed(2)} A ${inner} ${inner} 0 ${large} 0 ${x3.toFixed(2)} ${y3.toFixed(2)} Z`;
+    }
+    function worthOf(person) {
+      return person.valuation === "priced" ? person.model_base : (person.best_guess || person.model_base);
+    }
+    function groupBuckets(people) {
+      const buckets = new Map();
+      for (const person of people) {
+        const key = person.sector || "Services";
+        if (!buckets.has(key)) buckets.set(key, { name: key, value: 0, people: [] });
+        const bucket = buckets.get(key);
+        bucket.value += worthOf(person);
+        bucket.people.push(person);
+      }
+      return [...buckets.values()].sort((a, b) => b.value - a.value || a.name.localeCompare(b.name));
+    }
+    function drawDonut() {
+      const people = chosenPeople();
+      const total = people.reduce((sum, person) => sum + worthOf(person), 0);
+      document.querySelector("#donut-total").textContent = total ? money(total) : "$0";
+      donut.replaceChildren();
+      legend.replaceChildren();
+      if (!total) return;
+      const byGroup = selectedSectors.size > 1;
+      let parts;
+      if (byGroup) {
+        parts = groupBuckets(people).map((bucket) => ({
+          name: bucket.name,
+          value: bucket.value,
+          sector: bucket.name,
+          count: bucket.people.length,
+        }));
+      } else {
+        const top = people.filter((person) => worthOf(person) >= 100000000);
+        const rest = people.filter((person) => worthOf(person) < 100000000);
+        parts = top.map((person) => ({ name: person.name, value: worthOf(person), pos: person.position }));
+        if (rest.length) {
+          parts.push({
+            name: "Everyone else",
+            value: rest.reduce((sum, person) => sum + worthOf(person), 0),
+            pos: rest[0].position,
+            rest: true,
+            count: rest.length,
+          });
+        }
+      }
+      let angle = -Math.PI / 2;
+      parts.forEach((part, index) => {
+        const sweep = (part.value / total) * Math.PI * 2;
+        const start = angle;
+        angle += sweep;
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        const color = part.rest ? otherColor : colors[index % colors.length];
+        part.color = color;
+        const gap = Math.min(0.006, sweep * 0.12);
+        path.setAttribute("d", arc(110, 110, 96, 62, start, Math.max(start + 0.001, angle - gap)));
+        path.setAttribute("fill", color);
+        const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        title.textContent = part.sector
+          ? part.name + ", " + part.count + " people, " + money(part.value)
+          : part.rest
+            ? "Everyone else, " + part.count + " people, " + money(part.value)
+            : part.name + " " + money(part.value);
+        path.append(title);
+        path.addEventListener("click", () => {
+          if (part.sector) selectOnly(part.sector);
+          else focusPerson(part.pos);
+        });
+        donut.append(path);
+      });
+      const legendRows = byGroup
+        ? parts
+        : people.map((person) => {
+            const match = parts.find((part) => part.pos === person.position);
+            return { name: person.name, value: worthOf(person), pos: person.position, color: match ? match.color : otherColor };
+          });
+      legendRows.forEach((part) => {
+        const li = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        const label = document.createElement("span");
+        label.innerHTML = `<span class="swatch" style="background:${part.color || otherColor}"></span>`;
+        label.append(document.createTextNode(part.name));
+        const amount = document.createElement("span");
+        amount.textContent = money(part.value);
+        button.append(label, amount);
+        button.addEventListener("click", () => {
+          if (part.sector) selectOnly(part.sector);
+          else focusPerson(part.pos);
+        });
+        li.append(button);
+        legend.append(li);
+      });
+    }
+    function tidy(value) {
+      const step = value >= 1e9 ? 5e7 : value >= 1e8 ? 5e6 : value >= 1e7 ? 5e5 : value >= 1e6 ? 5e4 : 1e4;
+      return Math.max(step, Math.round(value / step) * step);
+    }
+    function yearLabel(date) {
+      if (date === "Now") return "Now";
+      const year = String(date).match(/\d{4}/);
+      return year ? "’" + year[0].slice(2) : String(date);
+    }
+    function labelFor(person) {
+      if (person.evidence_class === "published_figure") return "Published figure";
+      if (person.evidence_class === "market_holding") return "Market holding";
+      if (person.evidence_class === "documented_proceeds") return "Documented proceeds";
+      return "Modeled estimate";
+    }
+    function movementText(person) {
+      if (person.movement === "up" && person.rank_delta) return "▲ " + person.rank_delta;
+      if (person.movement === "down" && person.rank_delta) return "▼ " + Math.abs(person.rank_delta);
+      if (person.movement === "added") return "New";
+      if (person.movement === "repriced") return "Repriced";
+      return "";
+    }
+    function seriesOf(person) {
+      if (person.history && person.history.length) {
+        const points = person.history.map((point) => ({ date: point.date, value: point.value }));
+        if (person.realtime) points.push({ date: "Now", value: person.realtime });
+        return { kind: "realtime", points };
+      }
+      const end = worthOf(person);
+      let hash = 2166136261;
+      for (let i = 0; i < person.name.length; i++) hash = Math.imul(hash ^ person.name.charCodeAt(i), 16777619);
+      const years = [2021, 2022, 2023, 2024, 2025, 2026];
+      const points = years.map((year, index) => {
+        if (index === years.length - 1) return { date: String(year), value: end };
+        const t = index / (years.length - 1);
+        const wobble = (((hash >>> (index * 3)) & 15) - 7) / 100;
+        const level = Math.min(1.08, Math.max(0.4, 0.62 + 0.38 * t + wobble));
+        return { date: String(year), value: tidy(end * level) };
+      });
+      return { kind: "guess", points };
+    }
+    function historyChart(person) {
+      const series = seriesOf(person);
+      const vals = series.points.map((point) => point.value);
+      const min = Math.min(...vals);
+      const max = Math.max(...vals);
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 320 148");
+      svg.setAttribute("width", "100%");
+      svg.setAttribute("role", "img");
+      const noun = labelFor(person);
+      svg.setAttribute("aria-label", noun + " " + money(vals[0]) + " to " + money(vals[vals.length - 1]));
+      const x = (index) => 18 + (index / Math.max(series.points.length - 1, 1)) * 284;
+      const y = (value) => 16 + (1 - (value - min) / Math.max(max - min, 1)) * 96;
+      const color = "#5eead4";
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+      line.setAttribute("points", series.points.map((point, index) => x(index).toFixed(1) + "," + y(point.value).toFixed(1)).join(" "));
+      line.setAttribute("fill", "none");
+      line.setAttribute("stroke", color);
+      line.setAttribute("stroke-width", "2");
+      svg.append(line);
+      const wrap = document.createElement("div");
+      wrap.className = "history-chart";
+      const tip = document.createElement("div");
+      tip.className = "history-tip";
+      tip.hidden = true;
+      series.points.forEach((point, index) => {
+        const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        dot.setAttribute("cx", x(index).toFixed(1));
+        dot.setAttribute("cy", y(point.value).toFixed(1));
+        dot.setAttribute("r", "4");
+        dot.setAttribute("fill", "#070b14");
+        dot.setAttribute("stroke", color);
+        dot.setAttribute("stroke-width", "2");
+        const hit = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        hit.setAttribute("cx", x(index).toFixed(1));
+        hit.setAttribute("cy", y(point.value).toFixed(1));
+        hit.setAttribute("r", "12");
+        hit.setAttribute("fill", "transparent");
+        hit.style.cursor = "pointer";
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", x(index).toFixed(1));
+        label.setAttribute("y", "142");
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("fill", "#93a4bd");
+        label.setAttribute("font-size", "10");
+        label.textContent = yearLabel(point.date);
+        const show = () => {
+          tip.hidden = false;
+          tip.replaceChildren();
+          const when = document.createElement("span");
+          when.textContent = point.date === "Now" ? "Now" : String(point.date);
+          const amount = document.createElement("strong");
+          amount.textContent = money(point.value);
+          tip.append(when, amount);
+          tip.style.left = (x(index) / 320 * 100) + "%";
+          tip.style.top = (y(point.value) / 148 * 100) + "%";
+        };
+        hit.addEventListener("mouseenter", show);
+        hit.addEventListener("mouseleave", () => { tip.hidden = true; });
+        svg.append(dot, label, hit);
+      });
+      wrap.append(svg, tip);
+      wrap.addEventListener("mouseleave", () => { tip.hidden = true; });
+      const caption = series.kind === "realtime"
+        ? labelFor(person)
+        : labelFor(person) + ". Illustrative path, not a reported history.";
+      return { node: wrap, kind: series.kind, caption };
+    }
+    function paintOpen() {
+      for (const [pos, pair] of rowByPos) {
+        const open = pos === openPos && !pair.row.hidden;
+        pair.detail.hidden = !open;
+        pair.row.classList.toggle("open", open);
+      }
+    }
+    function toggle(position) {
+      openPos = openPos === position ? null : position;
+      paintOpen();
+    }
+    const SECTOR = {
+      "Software": "Tech",
+      "Enterprise software": "Tech",
+      "Gaming software": "Tech",
+      "Telecom": "Tech",
+      "Private equity": "Finance",
+      "Venture capital": "Finance",
+      "Asset management": "Finance",
+      "Banking": "Finance",
+      "Insurance": "Finance",
+      "Tax services": "Finance",
+      "Logistics": "Logistics",
+      "Freight": "Logistics",
+      "Aviation": "Logistics",
+      "Real estate": "Real estate",
+      "Homebuilding": "Real estate",
+      "Healthcare services": "Healthcare",
+      "Biotech": "Healthcare",
+      "Medical devices": "Healthcare",
+      "Oil and gas": "Energy",
+      "Solar": "Energy",
+      "Energy": "Energy",
+      "Construction": "Construction",
+      "Building materials": "Construction",
+      "Architecture": "Construction",
+      "Engineering": "Construction",
+      "Roofing": "Construction",
+      "Pavement": "Construction",
+      "Facilities": "Construction",
+      "Agriculture": "Agriculture",
+      "Restaurants": "Food",
+      "Food": "Food",
+      "Beverages": "Food",
+      "Beverage distribution": "Food",
+      "Grocery": "Food",
+      "Retail": "Retail",
+      "Auto retail": "Retail",
+      "Consumer products": "Retail",
+      "Furniture": "Retail",
+      "Manufacturing": "Manufacturing",
+      "Equipment": "Manufacturing",
+      "Textiles": "Manufacturing",
+      "Chemicals": "Manufacturing",
+      "Boats": "Manufacturing",
+      "Packaging": "Manufacturing",
+      "Media": "Media",
+      "Marketing": "Media",
+      "Music": "Media",
+      "Printing": "Media",
+      "Home services": "Services",
+      "Landscaping": "Services",
+      "Pest control": "Services",
+      "Collision repair": "Services",
+      "Waste": "Services",
+      "Law": "Services",
+      "Professional services": "Services",
+      "Staffing": "Services",
+      "Franchising": "Services",
+      "Funeral": "Services",
+      "Hospitality": "Services",
+      "Education": "Services",
+      "Sports": "Services",
+    };
+    function sectorOf(person) {
+      return SECTOR[person.industry] || person.industry || "Services";
+    }
+    function chosenPeople() {
+      const needle = q.value.trim().toLowerCase();
+      return ranked.filter((person) => {
+        if (needle && !person.hay.includes(needle)) return false;
+        if (selectedSectors.size && !selectedSectors.has(person.sector)) return false;
+        return true;
+      });
+    }
+    function groupLabel() {
+      if (!selectedSectors.size) return "All industries";
+      return [...selectedSectors].sort((a, b) => a.localeCompare(b)).join(", ");
+    }
+    function syncGroupChecks() {
+      groupAll.checked = selectedSectors.size === 0;
+      groupSectors.querySelectorAll("input").forEach((box) => {
+        box.checked = selectedSectors.has(box.value);
+      });
+      groupButton.textContent = groupLabel();
+    }
+    function selectOnly(sector) {
+      selectedSectors.clear();
+      selectedSectors.add(sector);
+      q.value = "";
+      syncGroupChecks();
+      render();
+    }
+    function render() {
+      rows.replaceChildren();
+      rowByPos.clear();
+      const people = chosenPeople();
+      const grouped = groupHeaders.checked || selectedSectors.size > 1;
+      drawDonut();
+      if (!grouped) {
+        people.forEach(build);
+      } else {
+        const buckets = new Map();
+        for (const person of people) {
+          const key = person.sector || "Services";
+          if (!buckets.has(key)) buckets.set(key, []);
+          buckets.get(key).push(person);
+        }
+        const names = [...buckets.keys()].sort((a, b) => {
+          const sum = (key) => buckets.get(key).reduce((total, person) => total + worthOf(person), 0);
+          return sum(b) - sum(a) || a.localeCompare(b);
+        });
+        for (const name of names) {
+          const header = document.createElement("tr");
+          header.className = "industry-head";
+          const cell = document.createElement("td");
+          cell.colSpan = 7;
+          cell.textContent = name;
+          header.append(cell);
+          rows.append(header);
+          buckets.get(name).forEach(build);
+        }
+      }
+      paintOpen();
+    }
+    function focusPerson(position) {
+      const person = ranked.find((row) => row.position === position);
+      q.value = "";
+      if (person && selectedSectors.size && !selectedSectors.has(person.sector)) {
+        selectedSectors.clear();
+        syncGroupChecks();
+      }
+      render();
+      openPos = position;
+      paintOpen();
+      const pair = rowByPos.get(position);
+      if (pair) pair.row.scrollIntoView({ block: "center" });
+    }
+    function build(person) {
+      const row = document.createElement("tr");
+      row.className = "rank-row";
+      const rank = document.createElement("td");
+      rank.className = "pos";
+      rank.textContent = String(person.rank);
+      const move = movementText(person);
+      if (move) {
+        const mark = document.createElement("span");
+        mark.className = "move";
+        mark.textContent = move;
+        rank.append(mark);
+      }
+      const name = document.createElement("td");
+      name.className = "rank-name";
+      name.textContent = person.name;
+      const worth = document.createElement("td");
+      worth.textContent = money(worthOf(person));
+      const age = document.createElement("td");
+      const place = document.createElement("td");
+      place.textContent = person.region || "North Carolina";
+      const source = document.createElement("td");
+      source.textContent = person.company || "";
+      const industry = document.createElement("td");
+      industry.textContent = person.industry || "";
+      if (person.sector) industry.title = person.sector;
+      row.append(rank, name, worth, age, place, source, industry);
+      row.addEventListener("click", () => toggle(person.position));
+      const detail = document.createElement("tr");
+      detail.hidden = true;
+      const cell = document.createElement("td");
+      cell.colSpan = 7;
+      const panel = document.createElement("div");
+      panel.className = "rank-panel";
+      const copy = document.createElement("div");
+      const why = document.createElement("p");
+      why.textContent = visible(person.best_guess_why || "");
+      const text = document.createElement("p");
+      text.textContent = visible(person.valuation_note || person.ownership || "");
+      const tie = document.createElement("p");
+      tie.className = "tie";
+      tie.textContent = person.nc_tie || "";
+      const link = document.createElement("a");
+      link.href = person.source || "#";
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.className = "profile";
+      link.textContent = "Source";
+      const meta = document.createElement("p");
+      meta.className = "tie";
+      const bits = [labelFor(person)];
+      if (person.valued_at) bits.push("Valued " + person.valued_at);
+      if (person.freshness) bits.push(person.freshness);
+      if (person.previous_base) bits.push("Previous estimate " + money(person.previous_base));
+      else if (person.movement === "baseline") bits.push("First snapshot. Rank is unchanged until the next published snapshot.");
+      meta.textContent = bits.join(" ");
+      copy.append(why, text, tie, meta, link);
+      if (person.valuation_source && person.valuation_source !== person.source) {
+        const method = document.createElement("a");
+        method.href = person.valuation_source;
+        method.target = "_blank";
+        method.rel = "noreferrer";
+        method.className = "profile";
+        method.textContent = "Methodology";
+        copy.append(method);
+      }
+      const chart = document.createElement("div");
+      const title = document.createElement("div");
+      title.className = "range-title";
+      const drawn = historyChart(person);
+      title.textContent = drawn.caption;
+      chart.append(title, drawn.node);
+      panel.append(copy, chart);
+      cell.append(panel);
+      detail.append(cell);
+      rows.append(row, detail);
+      rowByPos.set(person.position, { row, detail });
+    }
+    q.addEventListener("input", render);
+    groupButton.addEventListener("click", () => {
+      const open = groupPanel.hidden;
+      groupPanel.hidden = !open;
+      groupButton.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    groupAll.addEventListener("change", () => {
+      selectedSectors.clear();
+      syncGroupChecks();
+      render();
+    });
+    groupHeaders.addEventListener("change", render);
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".group-menu")) {
+        groupPanel.hidden = true;
+        groupButton.setAttribute("aria-expanded", "false");
+      }
+    });
+    function showRanking(list, headline) {
+      ranked = list;
+      assignRegions(ranked);
+      ranked.forEach((person, index) => {
+        person.rank = person.rank || index + 1;
+        person.industry = person.industry || "Other";
+        person.sector = sectorOf(person);
+        person.hay = (person.name + " " + person.company + " " + person.industry + " " + person.sector + " " + person.region + " " + (person.evidence_class || "")).toLowerCase();
+      });
+      const industries = [...new Set(ranked.map((person) => person.sector))].sort((a, b) => a.localeCompare(b));
+      groupSectors.replaceChildren();
+      for (const name of industries) {
+        const label = document.createElement("label");
+        const box = document.createElement("input");
+        box.type = "checkbox";
+        box.value = name;
+        box.addEventListener("change", () => {
+          if (box.checked) selectedSectors.add(name);
+          else selectedSectors.delete(name);
+          syncGroupChecks();
+          render();
+        });
+        label.append(box, document.createTextNode(name));
+        groupSectors.append(label);
+      }
+      note.textContent = headline;
+      openPos = ranked[0].position;
+      render();
+    }
+    fetch("data/top500.json").then((res) => res.json()).then((body) => {
+      if (body.snapshot) {
+        showRanking(body.people, body.headline);
+        return;
+      }
+      return fetch("data/worth-pie.json").then((res) => res.json()).then((worth) => {
+        const priced = (worth.fortunes || []).map((row, index) => ({
+          position: "priced-" + index,
+          name: row.name,
+          company: row.company || "",
+          valuation: "priced",
+          model_low: row.low || row.base,
+          model_base: row.realtime || row.base,
+          model_high: row.high || row.base,
+          best_guess: row.realtime || row.base,
+          history: row.history || null,
+          realtime: row.realtime || null,
+          industry: row.industry || "",
+          best_guess_why: "Priced fortune from " + (row.source_label || "a filing or a real-time profile") + ".",
+          valuation_note: row.note || "",
+          nc_tie: row.city ? row.city + ", North Carolina." : "",
+          source: row.source || "",
+        }));
+        const merged = priced.concat(body.people).sort((a, b) => ((b.best_guess || b.model_base) - (a.best_guess || a.model_base)) || (b.model_high - a.model_high) || a.name.localeCompare(b.name)).slice(0, 500);
+        showRanking(merged, "500 displayed estimates. Published figures and market holdings are dated. Private rows are modeled estimates.");
+      });
+    });
+  </script>
+</body>
+</html>
