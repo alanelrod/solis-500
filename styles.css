@@ -36,8 +36,9 @@ a { color: #93c5fd; }
   top: 0;
   z-index: 20;
 }
-.brand { display: flex; align-items: center; color: white; text-decoration: none; }
-.wordmark { height: 26px; width: auto; display: block; }
+.brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; }
+.brand-mark { height: 36px; width: auto; display: block; }
+.wordmark { height: 22px; width: auto; display: block; }
 .menu { position: relative; }
 .menu-button {
   background: transparent;
