@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>USA · Solis 500</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../maps.css">
 </head>
-<body>
+<body class="map-view">
   <header class="bar">
-    <a class="brand" href="../" aria-label="Solis 500"><img class="brand-mark" src="../mark.png" alt=""><img class="wordmark" src="../solis500.png" alt=""></a>
+    <a class="brand" href="../" aria-label="Solis 500"><img class="brand-mark" src="../mark.png" alt="" width="36" height="36"><img class="wordmark" src="../solis500.png" alt="" width="148" height="22"></a>
     <div class="menu">
       <button type="button" class="menu-button" id="menu-button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
       <nav id="menu-panel" class="menu-panel" hidden aria-label="Place">
-        <span class="trail-world">World</span>
-        <a href="./" aria-current="page">USA</a>
+        <a href="../world/">World</a>
+        <a href="../usa/" aria-current="page">USA</a>
         <a href="../">NC 500</a>
       </nav>
     </div>
@@ -22,18 +23,71 @@
   <header class="top">
     <div>
       <h1>United States</h1>
-      <div class="sub">North Carolina is the published list.</div>
+      <div class="sub">North Carolina is the published list. Pins are places named on those records.</div>
     </div>
   </header>
   <main>
-    <a class="card place-card" href="../">
-      <div>
-        <div class="name">North Carolina</div>
-        <div class="muted">NC 500</div>
-      </div>
-      <span class="muted">500 displayed estimates</span>
-    </a>
+    <div class="map-kpis"><div class="map-kpi"><div class="n">500</div><div class="k">People</div><div class="note">Displayed estimates</div></div><div class="map-kpi"><div class="n">$47.91B</div><div class="k">Displayed</div><div class="note">As of 2026-10-18</div></div><div class="map-kpi"><div class="n">19</div><div class="k">Places</div><div class="note">On this map</div></div><div class="map-kpi"><div class="n">1</div><div class="k">State</div><div class="note">North Carolina</div></div></div>
+    <div class="map-layout">
+      <section class="school-map-card" data-map>
+        <div class="map-title">United States</div>
+        <div class="map-viewport">
+          <div class="map-stage">
+            <img class="map-land" src="../maps/us.svg" alt="">
+            <div class="map-fx"></div>
+            <div class="pins"><a class="map-pin" href="../?q=Cary" style="left:78.41%;top:54.01%" aria-label="Cary, 9 people · $21.01B" data-name="Cary" data-note="9 people · $21.01B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Raleigh" style="left:78.65%;top:54.05%" aria-label="Raleigh, 55 people · $7.95B" data-name="Raleigh" data-note="55 people · $7.95B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Charlotte" style="left:74.93%;top:56.23%" aria-label="Charlotte, 77 people · $5.91B" data-name="Charlotte" data-note="77 people · $5.91B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Durham" style="left:78.21%;top:53.21%" aria-label="Durham, 35 people · $3.83B" data-name="Durham" data-note="35 people · $3.83B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Greensboro" style="left:76.71%;top:52.9%" aria-label="Greensboro, 33 people · $3.07B" data-name="Greensboro" data-note="33 people · $3.07B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../" style="left:76.6%;top:54.96%" aria-label="North Carolina, 199 people · $2.01B" data-name="North Carolina" data-note="199 people · $2.01B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Thomasville" style="left:76.22%;top:53.65%" aria-label="Thomasville, 3 people · $1.52B" data-name="Thomasville" data-note="3 people · $1.52B"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Asheville" style="left:72.04%;top:54.76%" aria-label="Asheville, 12 people · $624.6M" data-name="Asheville" data-note="12 people · $624.6M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Hickory" style="left:74.09%;top:54.25%" aria-label="Hickory, 8 people · $393.4M" data-name="Hickory" data-note="8 people · $393.4M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Greenville" style="left:80.79%;top:54.72%" aria-label="Greenville, 4 people · $299.4M" data-name="Greenville" data-note="4 people · $299.4M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Wilmington" style="left:79.92%;top:60.28%" aria-label="Wilmington, 16 people · $281.6M" data-name="Wilmington" data-note="16 people · $281.6M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Winston-Salem" style="left:75.95%;top:52.78%" aria-label="Winston-Salem, 13 people · $187.5M" data-name="Winston-Salem" data-note="13 people · $187.5M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Gastonia" style="left:74.36%;top:56.11%" aria-label="Gastonia, 4 people · $179.6M" data-name="Gastonia" data-note="4 people · $179.6M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Chapel%20Hill" style="left:77.94%;top:53.53%" aria-label="Chapel Hill, 4 people · $144.7M" data-name="Chapel Hill" data-note="4 people · $144.7M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Goldsboro" style="left:79.75%;top:55.63%" aria-label="Goldsboro, 3 people · $112.8M" data-name="Goldsboro" data-note="3 people · $112.8M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Huntersville" style="left:74.93%;top:55.52%" aria-label="Huntersville, 7 people · $101.5M" data-name="Huntersville" data-note="7 people · $101.5M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Kinston" style="left:80.44%;top:56.11%" aria-label="Kinston, 3 people · $83.6M" data-name="Kinston" data-note="3 people · $83.6M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Fayetteville" style="left:78.24%;top:56.94%" aria-label="Fayetteville, 10 people · $62.4M" data-name="Fayetteville" data-note="10 people · $62.4M"><span class="pin-dot"></span></a>
+<a class="map-pin" href="../?q=Rocky%20Mount" style="left:80.08%;top:53.41%" aria-label="Rocky Mount, 3 people · $49.7M" data-name="Rocky Mount" data-note="3 people · $49.7M"><span class="pin-dot"></span></a></div>
+          </div>
+        </div>
+        <div class="map-hud"></div>
+        <div class="map-controls">
+          <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+          <button type="button" data-zoom="reset" aria-label="Reset">⟲</button>
+        </div>
+      </section>
+      <aside class="map-side">
+        <h2>Places</h2>
+        <a class="place-row" href="../?q=Cary"><span class="pin-dot"></span><span><b>Cary</b><small>9 people</small></span><span>$21.01B</span></a>
+<a class="place-row" href="../?q=Raleigh"><span class="pin-dot"></span><span><b>Raleigh</b><small>55 people</small></span><span>$7.95B</span></a>
+<a class="place-row" href="../?q=Charlotte"><span class="pin-dot"></span><span><b>Charlotte</b><small>77 people</small></span><span>$5.91B</span></a>
+<a class="place-row" href="../?q=Durham"><span class="pin-dot"></span><span><b>Durham</b><small>35 people</small></span><span>$3.83B</span></a>
+<a class="place-row" href="../?q=Greensboro"><span class="pin-dot"></span><span><b>Greensboro</b><small>33 people</small></span><span>$3.07B</span></a>
+<a class="place-row" href="../"><span class="pin-dot"></span><span><b>North Carolina</b><small>199 people</small></span><span>$2.01B</span></a>
+<a class="place-row" href="../?q=Thomasville"><span class="pin-dot"></span><span><b>Thomasville</b><small>3 people</small></span><span>$1.52B</span></a>
+<a class="place-row" href="../?q=Asheville"><span class="pin-dot"></span><span><b>Asheville</b><small>12 people</small></span><span>$624.6M</span></a>
+<a class="place-row" href="../?q=Hickory"><span class="pin-dot"></span><span><b>Hickory</b><small>8 people</small></span><span>$393.4M</span></a>
+<a class="place-row" href="../?q=Greenville"><span class="pin-dot"></span><span><b>Greenville</b><small>4 people</small></span><span>$299.4M</span></a>
+<a class="place-row" href="../?q=Wilmington"><span class="pin-dot"></span><span><b>Wilmington</b><small>16 people</small></span><span>$281.6M</span></a>
+<a class="place-row" href="../?q=Winston-Salem"><span class="pin-dot"></span><span><b>Winston-Salem</b><small>13 people</small></span><span>$187.5M</span></a>
+<a class="place-row" href="../?q=Gastonia"><span class="pin-dot"></span><span><b>Gastonia</b><small>4 people</small></span><span>$179.6M</span></a>
+<a class="place-row" href="../?q=Chapel%20Hill"><span class="pin-dot"></span><span><b>Chapel Hill</b><small>4 people</small></span><span>$144.7M</span></a>
+<a class="place-row" href="../?q=Goldsboro"><span class="pin-dot"></span><span><b>Goldsboro</b><small>3 people</small></span><span>$112.8M</span></a>
+<a class="place-row" href="../?q=Huntersville"><span class="pin-dot"></span><span><b>Huntersville</b><small>7 people</small></span><span>$101.5M</span></a>
+<a class="place-row" href="../?q=Kinston"><span class="pin-dot"></span><span><b>Kinston</b><small>3 people</small></span><span>$83.6M</span></a>
+<a class="place-row" href="../?q=Fayetteville"><span class="pin-dot"></span><span><b>Fayetteville</b><small>10 people</small></span><span>$62.4M</span></a>
+<a class="place-row" href="../?q=Rocky%20Mount"><span class="pin-dot"></span><span><b>Rocky Mount</b><small>3 people</small></span><span>$49.7M</span></a>
+      </aside>
+    </div>
   </main>
   <script src="../menu.js"></script>
+  <script src="../maps.js"></script>
 </body>
 </html>

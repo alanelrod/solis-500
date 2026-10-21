@@ -96,11 +96,11 @@
 </head>
 <body>
   <header class="bar">
-    <a class="brand" href="./" aria-label="Solis 500"><img class="brand-mark" src="mark.png" alt=""><img class="wordmark" src="solis500.png" alt=""></a>
+    <a class="brand" href="./" aria-label="Solis 500"><img class="brand-mark" src="mark.png" alt="" width="36" height="36"><img class="wordmark" src="solis500.png" alt="" width="148" height="22"></a>
     <div class="menu">
       <button type="button" class="menu-button" id="menu-button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
       <nav id="menu-panel" class="menu-panel" hidden aria-label="Place">
-        <span class="trail-world">World</span>
+        <a href="world/">World</a>
         <a href="usa/">USA</a>
         <a href="./" aria-current="page">NC 500</a>
       </nav>
@@ -151,6 +151,8 @@
     const donut = document.querySelector("#donut");
     const legend = document.querySelector("#legend");
     const q = document.querySelector("#q");
+    const preset = new URLSearchParams(location.search).get("q");
+    if (preset) q.value = preset;
     const groupButton = document.querySelector("#group-button");
     const groupPanel = document.querySelector("#group-panel");
     const groupAll = document.querySelector("#group-all");

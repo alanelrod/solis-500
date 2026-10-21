@@ -1,0 +1,58 @@
+body.map-view header.top,
+body.map-view main { max-width: 1180px; }
+.map-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 8px 0 14px; }
+.map-kpi { background: rgba(16, 25, 44, 0.86); border: 1px solid rgba(120, 160, 255, 0.22); border-radius: 16px; padding: 14px 12px; }
+.map-kpi .n { font-size: 26px; font-weight: 650; letter-spacing: -0.03em; line-height: 1; }
+.map-kpi .k { margin-top: 6px; }
+.map-kpi .note { color: var(--muted); font-size: 12px; }
+.map-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; align-items: start; }
+.school-map-card {
+  position: relative; height: 560px; border-radius: 16px; overflow: hidden; cursor: grab; touch-action: none;
+  background: #040e1c; border: 1px solid rgba(120, 150, 255, 0.32);
+  box-shadow: inset 0 0 60px rgba(88, 60, 180, 0.22), inset 0 0 40px rgba(40, 140, 255, 0.16), 0 0 28px rgba(70, 90, 200, 0.16);
+}
+.school-map-card.is-dragging { cursor: grabbing; }
+.map-viewport { position: absolute; inset: 0; overflow: hidden; }
+.map-stage { position: absolute; inset: 0; transform-origin: 0 0; }
+.map-land, .map-fx, .map-hud { position: absolute; inset: 0; }
+.map-land { width: 100%; height: 100%; object-fit: fill; pointer-events: none; filter: drop-shadow(0 0 12px rgba(90, 140, 255, 0.28)); }
+.map-fx, .map-hud { pointer-events: none; }
+.map-fx { z-index: 1; background: linear-gradient(180deg, rgba(160, 140, 255, 0.08), transparent 30%), repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(100, 140, 230, 0.045) 4px); }
+.map-hud { z-index: 3; background: radial-gradient(ellipse at center, transparent 46%, rgba(8, 6, 24, 0.55) 100%); }
+.map-title { position: absolute; z-index: 5; top: 12px; left: 14px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(190, 200, 245, 0.8); }
+.pins { position: absolute; inset: 0; z-index: 2; }
+.map-pin {
+  position: absolute; width: 18px; height: 18px; margin: 0; padding: 0;
+  transform: translate(-50%, -50%) scale(var(--pin-scale, 1));
+  border-radius: 999px; border: 0; background: transparent;
+  display: grid; place-items: center; z-index: 2;
+}
+.pin-dot { width: 10px; height: 10px; border-radius: 99px; background: #7dd3fc; box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35), 0 0 14px rgba(129, 140, 248, 0.85); }
+.map-pin:hover { z-index: 4; }
+.map-pin:hover .pin-dot { background: white; }
+.map-controls { position: absolute; right: 10px; bottom: 10px; z-index: 5; display: flex; flex-direction: column; gap: 4px; }
+.map-controls button { width: 28px; height: 28px; border-radius: 8px; border: 1px solid rgba(150, 170, 255, 0.35); background: rgba(10, 16, 40, 0.86); color: #e5e7eb; cursor: pointer; }
+.map-tip {
+  position: absolute; z-index: 6; pointer-events: none;
+  background: rgba(8, 12, 28, 0.94); border: 1px solid rgba(150, 170, 255, 0.35);
+  color: #e8eef7; border-radius: 8px; padding: 6px 8px; font-size: 12px;
+}
+.map-tip b { display: block; }
+.map-tip span { color: var(--muted); }
+.map-side {
+  height: 560px; overflow: auto; border: 1px solid rgba(120, 150, 255, 0.28);
+  border-radius: 16px; background: rgba(8, 12, 28, 0.92); padding: 12px 14px;
+}
+.map-side h2 { margin: 0 0 8px; font-size: 16px; }
+.place-row {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center;
+  padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: inherit; text-decoration: none;
+}
+.place-row b { display: block; font-weight: 650; }
+.place-row small { color: var(--muted); }
+.place-row:hover b { color: white; }
+@media (max-width: 800px) {
+  .map-kpis, .map-layout { grid-template-columns: 1fr; }
+  .school-map-card, .map-side { height: 420px; }
+}

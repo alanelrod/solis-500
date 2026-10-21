@@ -37,8 +37,8 @@ a { color: #93c5fd; }
   z-index: 20;
 }
 .brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; }
-.brand-mark { height: 36px; width: auto; display: block; }
-.wordmark { height: 22px; width: auto; display: block; }
+.brand img.brand-mark { width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain; display: block; }
+.brand img.wordmark { height: 22px; width: auto; max-height: 22px; display: block; }
 .menu { position: relative; }
 .menu-button {
   background: transparent;

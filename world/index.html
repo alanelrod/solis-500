@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../mark.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World · Solis 500</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../maps.css">
+</head>
+<body class="map-view">
+  <header class="bar">
+    <a class="brand" href="../" aria-label="Solis 500"><img class="brand-mark" src="../mark.png" alt="" width="36" height="36"><img class="wordmark" src="../solis500.png" alt="" width="148" height="22"></a>
+    <div class="menu">
+      <button type="button" class="menu-button" id="menu-button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+      <nav id="menu-panel" class="menu-panel" hidden aria-label="Place">
+        <a href="../world/" aria-current="page">World</a>
+        <a href="../usa/">USA</a>
+        <a href="../">NC 500</a>
+      </nav>
+    </div>
+  </header>
+  <header class="top">
+    <div>
+      <h1>World</h1>
+      <div class="sub">The United States is the published country. The list inside it is North Carolina.</div>
+    </div>
+  </header>
+  <main>
+    <div class="map-kpis"><div class="map-kpi"><div class="n">1</div><div class="k">Country</div><div class="note">United States</div></div><div class="map-kpi"><div class="n">500</div><div class="k">People</div><div class="note">Displayed estimates</div></div><div class="map-kpi"><div class="n">$47.91B</div><div class="k">Displayed</div><div class="note">As of 2026-10-18</div></div><div class="map-kpi"><div class="n">NC</div><div class="k">List</div><div class="note">North Carolina</div></div></div>
+    <div class="map-layout">
+      <section class="school-map-card" data-map>
+        <div class="map-title">World</div>
+        <div class="map-viewport">
+          <div class="map-stage">
+            <img class="map-land" src="../maps/world.svg" alt="">
+            <div class="map-fx"></div>
+            <div class="pins"><a class="map-pin" href="../usa/" style="left:23.06%;top:28.89%" aria-label="United States, 500 people · $47.91B" data-name="United States" data-note="500 people · $47.91B"><span class="pin-dot"></span></a></div>
+          </div>
+        </div>
+        <div class="map-hud"></div>
+        <div class="map-controls">
+          <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+          <button type="button" data-zoom="reset" aria-label="Reset">⟲</button>
+        </div>
+      </section>
+      <aside class="map-side">
+        <h2>Published</h2>
+        <a class="place-row" href="../usa/"><span class="pin-dot"></span><span><b>United States</b><small>North Carolina · 500 people</small></span><span>$47.91B</span></a>
+      </aside>
+    </div>
+  </main>
+  <script src="../menu.js"></script>
+  <script src="../maps.js"></script>
+</body>
+</html>
