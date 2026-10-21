@@ -25,7 +25,8 @@ a { color: #93c5fd; }
 .bar {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 16px;
   min-height: 64px;
   padding: 10px 22px;
   border-bottom: 1px solid var(--line);
@@ -33,13 +34,45 @@ a { color: #93c5fd; }
   backdrop-filter: blur(18px);
   position: sticky;
   top: 0;
-  z-index: 5;
-  flex-wrap: wrap;
+  z-index: 20;
 }
 .brand { display: flex; align-items: center; color: white; text-decoration: none; }
 .wordmark { height: 26px; width: auto; display: block; }
-.trail { display: flex; align-items: center; gap: 10px; font-size: 15px; }
-.trail .sep, .trail-world { color: var(--muted); }
+.menu { position: relative; }
+.menu-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.menu-button[aria-expanded="true"] { color: white; border-color: rgba(255, 255, 255, 0.45); }
+.menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 180px;
+  padding: 8px;
+  display: grid;
+  gap: 2px;
+  background: #10182a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.menu-panel[hidden] { display: none; }
+.bar .menu-panel .trail-world,
+.bar .menu-panel a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  text-decoration: none;
+  box-shadow: none;
+}
+.bar .menu-panel a[aria-current="page"] { color: white; }
+.bar .menu-panel a:hover { background: rgba(255, 255, 255, 0.06); color: white; }
 .place-card {
   display: flex;
   justify-content: space-between;
@@ -79,6 +112,11 @@ a { color: #93c5fd; }
 .bar nav { display: flex; gap: 18px; }
 .bar nav a { color: var(--muted); text-decoration: none; padding: 18px 0; white-space: nowrap; }
 .bar nav a[aria-current="page"] { color: white; box-shadow: inset 0 -2px 0 var(--blue); }
+.bar .menu-panel { display: grid; gap: 2px; }
+.bar .menu-panel[hidden] { display: none; }
+.bar .menu-panel a,
+.bar .menu-panel a[aria-current="page"] { padding: 8px 10px; box-shadow: none; color: var(--muted); }
+.bar .menu-panel a[aria-current="page"] { color: white; }
 button, input, select, textarea { font: inherit; color: inherit; }
 header.top {
   display: flex;
