@@ -25,17 +25,32 @@ a { color: #93c5fd; }
 .bar {
   display: flex;
   align-items: center;
-  gap: 22px;
-  height: 58px;
-  padding: 0 22px;
+  gap: 28px;
+  min-height: 64px;
+  padding: 10px 22px;
   border-bottom: 1px solid var(--line);
   background: rgba(10, 16, 30, 0.72);
   backdrop-filter: blur(18px);
   position: sticky;
   top: 0;
   z-index: 5;
+  flex-wrap: wrap;
 }
-.brand { display: flex; gap: 10px; align-items: center; color: white; text-decoration: none; font-weight: 650; }
+.brand { display: flex; align-items: center; color: white; text-decoration: none; }
+.wordmark { height: 26px; width: auto; display: block; }
+.trail { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.trail .sep, .trail-world { color: var(--muted); }
+.place-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 18px;
+}
+.place-card:hover { border-color: rgba(147, 197, 253, 0.45); }
+.place-card .name { font-size: 18px; }
 .substrip {
   display: flex;
   flex-wrap: wrap;
