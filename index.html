@@ -79,6 +79,7 @@
     .own.rank td.worth.provisional span { color: #5eead4; }
     .own.rank td.worth.priced span { color: #fbbf24; }
     .rank-name { font-weight: 650; }
+    .ncssm-mark { height: 18px; width: auto; margin-left: 6px; vertical-align: -3px; }
     .rank-panel { display: grid; grid-template-columns: 1.45fr 0.9fr; gap: 28px; padding: 4px 8px 18px 3rem; }
     .rank-panel p { margin: 0 0 8px; max-width: 68ch; }
     .rank-panel .tie { color: var(--muted); font-size: 13px; }
@@ -340,7 +341,7 @@
         ? parts
         : people.map((person) => {
             const match = parts.find((part) => part.pos === person.position);
-            return { name: person.name, value: worthOf(person), pos: person.position, color: match ? match.color : otherColor };
+            return { name: person.name, value: worthOf(person), pos: person.position, color: match ? match.color : otherColor, ncssm: person.ncssm };
           });
       legendRows.forEach((part) => {
         const li = document.createElement("li");
@@ -349,6 +350,13 @@
         const label = document.createElement("span");
         label.innerHTML = `<span class="swatch" style="background:${part.color || otherColor}"></span>`;
         label.append(document.createTextNode(part.name));
+        if (part.ncssm) {
+          const mark = document.createElement("img");
+          mark.className = "ncssm-mark";
+          mark.src = "ncssm.png";
+          mark.alt = "";
+          label.append(mark);
+        }
         const amount = document.createElement("span");
         amount.textContent = money(part.value);
         button.append(label, amount);
@@ -633,6 +641,13 @@
       const name = document.createElement("td");
       name.className = "rank-name";
       name.textContent = person.name;
+      if (person.ncssm) {
+        const mark = document.createElement("img");
+        mark.className = "ncssm-mark";
+        mark.src = "ncssm.png";
+        mark.alt = "NCSSM";
+        name.append(mark);
+      }
       const worth = document.createElement("td");
       worth.textContent = money(worthOf(person));
       const age = document.createElement("td");
@@ -659,6 +674,9 @@
       const tie = document.createElement("p");
       tie.className = "tie";
       tie.textContent = person.nc_tie || "";
+      const school = document.createElement("p");
+      school.className = "tie";
+      school.textContent = person.ncssm ? "NCSSM class of " + person.ncssm + "." : "";
       const link = document.createElement("a");
       link.href = person.source || "#";
       link.target = "_blank";
@@ -673,7 +691,9 @@
       if (person.previous_base) bits.push("Previous estimate " + money(person.previous_base));
       else if (person.movement === "baseline") bits.push("First snapshot. Rank is unchanged until the next published snapshot.");
       meta.textContent = bits.join(" ");
-      copy.append(why, text, tie, meta, link);
+      copy.append(why, text, tie);
+      if (person.ncssm) copy.append(school);
+      copy.append(meta, link);
       if (person.valuation_source && person.valuation_source !== person.source) {
         const method = document.createElement("a");
         method.href = person.valuation_source;
@@ -720,7 +740,7 @@
         person.rank = person.rank || index + 1;
         person.industry = person.industry || "Other";
         person.sector = sectorOf(person);
-        person.hay = (person.name + " " + person.company + " " + person.industry + " " + person.sector + " " + person.region + " " + (person.evidence_class || "")).toLowerCase();
+        person.hay = (person.name + " " + person.company + " " + person.industry + " " + person.sector + " " + person.region + " " + (person.evidence_class || "") + (person.ncssm ? " ncssm" : "")).toLowerCase();
       });
       const industries = [...new Set(ranked.map((person) => person.sector))].sort((a, b) => a.localeCompare(b));
       groupSectors.replaceChildren();
