@@ -1,0 +1,2511 @@
+{
+  "matches": {
+    "james-goodnight": {
+      "school": "North Carolina State University",
+      "why": "James Goodnight",
+      "company": "SAS Institute",
+      "logo": "marks/north-carolina-state-university.png"
+    },
+    "john-sall": {
+      "school": "Beloit College",
+      "why": "public bio",
+      "logo": "marks/beloit-college.png"
+    },
+    "tim-sweeney": {
+      "school": "University of Maryland, College Park",
+      "why": "Tim Sweeney",
+      "company": "Epic Games",
+      "logo": "marks/university-of-maryland-college-park.png"
+    },
+    "roy-carroll-ii": {
+      "school": null,
+      "why": "Roy Carroll",
+      "company": "Carroll Companies"
+    },
+    "dennis-gillings": {
+      "school": "University of Exeter",
+      "why": "Dennis Gillings",
+      "company": "Quintiles, now IQVIA",
+      "logo": "marks/university-of-exeter.png"
+    },
+    "j-frank-harrison-iii-and-family": {
+      "school": null,
+      "why": "J. Frank Harrison III",
+      "company": "Coca-Cola Consolidated"
+    },
+    "olivia-holding": {
+      "school": null,
+      "why": "",
+      "company": "First Citizens BancShares"
+    },
+    "carson-brice": {
+      "school": null,
+      "why": "",
+      "company": "First Citizens BancShares"
+    },
+    "claire-bristow": {
+      "school": null,
+      "why": "",
+      "company": "First Citizens BancShares"
+    },
+    "frank-holding-jr": {
+      "school": "University of North Carolina at Chapel Hill",
+      "why": "public bio",
+      "logo": "marks/university-of-north-carolina-at-chapel-hill.png"
+    },
+    "ric-elias": {
+      "school": "Boston College",
+      "why": "public bio",
+      "logo": "marks/boston-college.png"
+    },
+    "john-r-congdon-jr": {
+      "school": null,
+      "why": "",
+      "company": "Old Dominion Freight Line"
+    },
+    "martine-rothblatt": {
+      "school": "University of California, Los Angeles",
+      "why": "Martine Rothblatt",
+      "company": "United Therapeutics",
+      "logo": "marks/university-of-california-los-angeles.png"
+    },
+    "smith-family": {
+      "school": null,
+      "why": "rejected Smith Family",
+      "company": "Sonic Automotive"
+    },
+    "david-s-congdon": {
+      "school": null,
+      "why": "",
+      "company": "Old Dominion Freight Line"
+    },
+    "hope-holding-bryant": {
+      "school": null,
+      "why": "",
+      "company": "First Citizens BancShares"
+    },
+    "robert-p-ingle-ii-and-family": {
+      "school": null,
+      "why": "",
+      "company": "Ingles Markets"
+    },
+    "rick-schnall": {
+      "school": "University of Pennsylvania",
+      "why": "Rick Schnall",
+      "company": "Charlotte Hornets",
+      "logo": "marks/university-of-pennsylvania.png"
+    },
+    "rich-balot": {
+      "school": "North Carolina School of Science and Mathematics",
+      "why": "confirmed NCSSM alumnus",
+      "logo": "marks/north-carolina-school-of-science-and-mathematics.png"
+    },
+    "fielding-miller": {
+      "school": null,
+      "why": "",
+      "company": "Captrust"
+    },
+    "fred-klein": {
+      "school": null,
+      "why": "Fred Klein",
+      "company": "Childress Klein"
+    },
+    "anderson-warlick": {
+      "school": null,
+      "why": "",
+      "company": "Parkdale Mills"
+    },
+    "r-jude-samulski": {
+      "school": "Clemson University",
+      "why": "public bio",
+      "logo": "marks/clemson-university.png"
+    },
+    "sheila-mikhail": {
+      "school": null,
+      "why": "",
+      "company": "AskBio"
+    },
+    "james-s-mahan-iii": {
+      "school": null,
+      "why": "",
+      "company": "Live Oak Bancshares"
+    },
+    "james-shuford": {
+      "school": null,
+      "why": "",
+      "company": "STM Industries"
+    },
+    "stephen-shuford": {
+      "school": null,
+      "why": "",
+      "company": "STM Industries"
+    },
+    "van-isley": {
+      "school": null,
+      "why": "",
+      "company": "Isley Family Ventures"
+    },
+    "bill-cecil-jr": {
+      "school": null,
+      "why": "",
+      "company": "Biltmore Co."
+    },
+    "arthur-samet": {
+      "school": null,
+      "why": "",
+      "company": "Samet Corp."
+    },
+    "loren-ridinger": {
+      "school": null,
+      "why": "Loren Ridinger",
+      "company": "Market America"
+    },
+    "fred-anderson": {
+      "school": null,
+      "why": "Fred Anderson",
+      "company": "Anderson Automotive"
+    },
+    "amanda-weisiger-cornelson": {
+      "school": null,
+      "why": "",
+      "company": "Weisiger Group"
+    },
+    "grace-weisiger": {
+      "school": null,
+      "why": "",
+      "company": "Weisiger Group"
+    },
+    "marshall-weisiger-rodman": {
+      "school": null,
+      "why": "",
+      "company": "Weisiger Group"
+    },
+    "morris-reaves": {
+      "school": null,
+      "why": "",
+      "company": "Cook Out"
+    },
+    "john-mcconnell": {
+      "school": null,
+      "why": "John McConnell (actor)",
+      "company": "McConnell Golf"
+    },
+    "h-g-maxwell-iii": {
+      "school": null,
+      "why": "",
+      "company": "Goldsboro Milling"
+    },
+    "glenn-sherrill": {
+      "school": null,
+      "why": "",
+      "company": "SteelFab"
+    },
+    "jack-cecil": {
+      "school": null,
+      "why": "",
+      "company": "Biltmore Farms"
+    },
+    "rob-edwards": {
+      "school": null,
+      "why": "rejected Rob Edwards (footballer, born 1982)",
+      "company": "Ridgemont Equity Partners"
+    },
+    "allen-e-gant-jr": {
+      "school": null,
+      "why": "",
+      "company": "Glen Raven"
+    },
+    "don-flow": {
+      "school": "University of Virginia",
+      "why": "public bio",
+      "logo": "marks/university-of-virginia.png"
+    },
+    "robert-c-johnson": {
+      "school": null,
+      "why": "Robert Johnson",
+      "company": "House of Raeford Farms"
+    },
+    "lisa-tucker": {
+      "school": null,
+      "why": "Lisa Tucker",
+      "company": "Shoe Show"
+    },
+    "thomas-shelton": {
+      "school": null,
+      "why": "rejected Thomas Shelton",
+      "company": "Case Foods"
+    },
+    "michael-anderson": {
+      "school": null,
+      "why": "Michael J. Anderson",
+      "company": "Anderson Automotive"
+    },
+    "ed-weisiger-jr": {
+      "school": null,
+      "why": "",
+      "company": "Weisiger Group"
+    },
+    "ed-mcmahan": {
+      "school": null,
+      "why": "",
+      "company": "Falfurrias Capital Partners"
+    },
+    "brian-george": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Alex Lee"
+    },
+    "jeremy-reaves": {
+      "school": null,
+      "why": "Jeremy Reaves",
+      "company": "Cook Out"
+    },
+    "marsha-prestage": {
+      "school": null,
+      "why": "",
+      "company": "Prestage Farms"
+    },
+    "j-gregory-poole-iii": {
+      "school": null,
+      "why": "",
+      "company": "Gregory Poole Equipment"
+    },
+    "jim-segrave": {
+      "school": "East Carolina University",
+      "why": "public bio",
+      "logo": "marks/east-carolina-university.png"
+    },
+    "todd-olson": {
+      "school": "Carnegie Mellon University",
+      "why": "public bio",
+      "logo": "marks/carnegie-mellon-university.png"
+    },
+    "tammy-whitworth": {
+      "school": null,
+      "why": "",
+      "company": "Window World"
+    },
+    "mel-williams": {
+      "school": null,
+      "why": "rejected Mel Williams",
+      "company": "Truebridge Capital Partners"
+    },
+    "harry-smith": {
+      "school": null,
+      "why": "Harry Smith",
+      "company": "Rise Capital"
+    },
+    "pete-lash": {
+      "school": null,
+      "why": "",
+      "company": "Beacon Partners"
+    },
+    "edwin-poston": {
+      "school": null,
+      "why": "",
+      "company": "Truebridge Capital Partners"
+    },
+    "j-eric-pike": {
+      "school": null,
+      "why": "",
+      "company": "Pike"
+    },
+    "roger-jeffs": {
+      "school": null,
+      "why": "",
+      "company": "Kriya Therapeutics"
+    },
+    "carl-ryden": {
+      "school": "North Carolina School of Science and Mathematics",
+      "why": "confirmed NCSSM alumnus",
+      "logo": "marks/north-carolina-school-of-science-and-mathematics.png"
+    },
+    "wendell-murphy-jr": {
+      "school": null,
+      "why": "Wendell H. Murphy",
+      "company": "Murphy Family Ventures"
+    },
+    "clay-grubb": {
+      "school": null,
+      "why": "",
+      "company": "Grubb Properties"
+    },
+    "hugh-mccoll-jr": {
+      "school": "University of North Carolina at Chapel Hill",
+      "why": "Hugh McColl",
+      "company": "Falfurrias Capital Partners",
+      "logo": "marks/university-of-north-carolina-at-chapel-hill.png"
+    },
+    "wes-carter": {
+      "school": null,
+      "why": "",
+      "company": "Atlantic Packaging"
+    },
+    "william-herring": {
+      "school": null,
+      "why": "William Herring",
+      "company": "Hog Slat"
+    },
+    "alex-bernhardt-jr": {
+      "school": null,
+      "why": "",
+      "company": "Bernhardt Furniture"
+    },
+    "clay-thorp": {
+      "school": "University of North Carolina at Chapel Hill",
+      "why": "public bio",
+      "logo": "marks/university-of-north-carolina-at-chapel-hill.png"
+    },
+    "pat-rodgers": {
+      "school": null,
+      "why": "",
+      "company": "Rodgers Builders"
+    },
+    "howard-bissell-iii": {
+      "school": null,
+      "why": "",
+      "company": "Bissell Investment Co."
+    },
+    "roddey-dowd-jr": {
+      "school": null,
+      "why": "",
+      "company": "Charlotte Pipe and Foundry"
+    },
+    "art-pappas": {
+      "school": null,
+      "why": "",
+      "company": "Pappas Capital"
+    },
+    "bill-boddie": {
+      "school": null,
+      "why": "",
+      "company": "Boddie-Noell Enterprises"
+    },
+    "chuck-howard": {
+      "school": null,
+      "why": "rejected Chuck Howard",
+      "company": "Autobell"
+    },
+    "greg-hatem": {
+      "school": null,
+      "why": "",
+      "company": "Empire Properties"
+    },
+    "thomas-taft-jr": {
+      "school": null,
+      "why": "",
+      "company": "Taft Family Ventures"
+    },
+    "marc-oken": {
+      "school": null,
+      "why": "",
+      "company": "Falfurrias Capital Partners"
+    },
+    "mary-helms": {
+      "school": null,
+      "why": "",
+      "company": "Rho"
+    },
+    "paul-helms": {
+      "school": null,
+      "why": "Paul H. Helms",
+      "company": "Rho"
+    },
+    "eddie-smith": {
+      "school": null,
+      "why": "rejected Eddie Smith (baseball coach)",
+      "company": "Grady-White Boats"
+    },
+    "nayan-patel": {
+      "school": null,
+      "why": "",
+      "company": "CN Hotels"
+    },
+    "jeffrey-harris": {
+      "school": null,
+      "why": "rejected Jeffrey Harris",
+      "company": "Furnitureland South"
+    },
+    "steve-malik": {
+      "school": null,
+      "why": "Steve Malik",
+      "company": "North Carolina FC"
+    },
+    "john-bradford": {
+      "school": null,
+      "why": "rejected John Bradford",
+      "company": "PetScreening"
+    },
+    "michael-praeger": {
+      "school": "Georgetown University",
+      "why": "public bio",
+      "logo": "marks/georgetown-university.png"
+    },
+    "amit-sharma": {
+      "school": "North Carolina State University",
+      "why": "public bio",
+      "logo": "marks/north-carolina-state-university.png"
+    },
+    "alex-shuford-iii": {
+      "school": null,
+      "why": "",
+      "company": "Rock House Farm"
+    },
+    "michael-painter": {
+      "school": null,
+      "why": "rejected Michael Painter",
+      "company": "Plexus Capital"
+    },
+    "burney-jennings": {
+      "school": null,
+      "why": "",
+      "company": "Biscuitville"
+    },
+    "doyle-parrish": {
+      "school": null,
+      "why": "",
+      "company": "Summit Hospitality Group"
+    },
+    "eric-huang": {
+      "school": "North Carolina State University",
+      "why": "public bio",
+      "logo": "marks/north-carolina-state-university.png"
+    },
+    "joseph-budd": {
+      "school": null,
+      "why": "Joseph Lancaster Budd",
+      "company": "The Budd Group"
+    },
+    "keith-wayne": {
+      "school": null,
+      "why": "",
+      "company": "Wayne Brothers"
+    },
+    "bobby-ham": {
+      "school": null,
+      "why": "rejected Bobby Ham",
+      "company": "Ham Farms"
+    },
+    "erik-troan": {
+      "school": "North Carolina School of Science and Mathematics",
+      "why": "confirmed NCSSM alumnus",
+      "logo": "marks/north-carolina-school-of-science-and-mathematics.png"
+    },
+    "robert-barnhill-iii": {
+      "school": null,
+      "why": "",
+      "company": "Barnhill Contracting"
+    },
+    "abe-vanwingerden": {
+      "school": null,
+      "why": "",
+      "company": "Metrolina Greenhouses"
+    },
+    "art-vanwingerden": {
+      "school": null,
+      "why": "",
+      "company": "Metrolina Greenhouses"
+    },
+    "gary-rabon": {
+      "school": null,
+      "why": "",
+      "company": "Coldwell Banker Advantage"
+    },
+    "mar-herring": {
+      "school": null,
+      "why": "",
+      "company": "Hog Slat"
+    },
+    "richard-bryant": {
+      "school": null,
+      "why": "rejected Richard Bryant",
+      "company": "Capital Investment Companies"
+    },
+    "tommy-herring": {
+      "school": null,
+      "why": "",
+      "company": "Hog Slat"
+    },
+    "vickie-vanwingerden": {
+      "school": null,
+      "why": "",
+      "company": "Metrolina Greenhouses"
+    },
+    "mark-laport": {
+      "school": null,
+      "why": "",
+      "company": "Concord Hospitality Enterprises"
+    },
+    "sam-bratton": {
+      "school": null,
+      "why": "rejected Sam G. Bratton",
+      "company": "Wake Stone"
+    },
+    "greg-keith-jr": {
+      "school": null,
+      "why": "",
+      "company": "The Keith Corp."
+    },
+    "david-herring": {
+      "school": null,
+      "why": "",
+      "company": "Hog Slat"
+    },
+    "david-ravin": {
+      "school": null,
+      "why": "",
+      "company": "Northwood Ravin"
+    },
+    "matt-sink": {
+      "school": null,
+      "why": "",
+      "company": "Mickey Truck Bodies"
+    },
+    "otis-crowder": {
+      "school": null,
+      "why": "",
+      "company": "Crowder Constructors"
+    },
+    "don-rainey": {
+      "school": null,
+      "why": "",
+      "company": "Charlotte Fund"
+    },
+    "don-sherrill": {
+      "school": null,
+      "why": "",
+      "company": "SteelFab"
+    },
+    "eddie-vannoy": {
+      "school": null,
+      "why": "",
+      "company": "Vannoy Construction"
+    },
+    "matt-ailey": {
+      "school": null,
+      "why": "",
+      "company": "Quality Restaurant Group"
+    },
+    "phillip-sherrill": {
+      "school": null,
+      "why": "",
+      "company": "SteelFab"
+    },
+    "jesse-lipson": {
+      "school": "Duke University",
+      "why": "public bio",
+      "logo": "marks/duke-university.png"
+    },
+    "cindy-eckert": {
+      "school": "Marymount University",
+      "why": "Cindy Eckert",
+      "company": "Sprout Pharmaceuticals",
+      "logo": "marks/marymount-university.png"
+    },
+    "whitney-shaw": {
+      "school": null,
+      "why": "",
+      "company": "American City Business Journals"
+    },
+    "daren-parker": {
+      "school": null,
+      "why": "Daren Parker",
+      "company": "Parker Gas"
+    },
+    "donald-curtis": {
+      "school": null,
+      "why": "Donald Curtis",
+      "company": "Curtis Media Group"
+    },
+    "eddie-youngblood": {
+      "school": null,
+      "why": "",
+      "company": "National Power"
+    },
+    "scot-wingo": {
+      "school": "University of South Carolina",
+      "why": "public bio",
+      "logo": "marks/university-of-south-carolina.png"
+    },
+    "alan-zimmer": {
+      "school": null,
+      "why": "rejected Alan E. Zimmer",
+      "company": "Reeds Jewelers"
+    },
+    "johnny-barnes": {
+      "school": null,
+      "why": "Johnny Barnes",
+      "company": "Barnes Farming"
+    },
+    "w-t-crowder-jr": {
+      "school": null,
+      "why": "",
+      "company": "Crowder Constructors"
+    },
+    "faye-cooper": {
+      "school": null,
+      "why": "",
+      "company": "Mast General Store"
+    },
+    "john-cooper": {
+      "school": null,
+      "why": "John Cooper Clarke",
+      "company": "Mast General Store"
+    },
+    "trey-braswell-iii": {
+      "school": null,
+      "why": "",
+      "company": "Braswell Family Farms"
+    },
+    "mark-vannoy": {
+      "school": null,
+      "why": "",
+      "company": "Vannoy Construction"
+    },
+    "mike-lancaster": {
+      "school": null,
+      "why": "",
+      "company": "Frank L. Blum Construction"
+    },
+    "neal-hanks": {
+      "school": null,
+      "why": "",
+      "company": "Beverly-Hanks"
+    },
+    "bob-youakim": {
+      "school": null,
+      "why": "",
+      "company": "Passport"
+    },
+    "scott-perper": {
+      "school": null,
+      "why": "",
+      "company": "Pamlico Capital"
+    },
+    "watts-hamrick": {
+      "school": null,
+      "why": "",
+      "company": "Pamlico Capital"
+    },
+    "alyson-onsrud-strickland": {
+      "school": null,
+      "why": "",
+      "company": "C.R. Onsrud"
+    },
+    "dan-duncan": {
+      "school": null,
+      "why": "Dan Duncan",
+      "company": "Duncan-Parnell"
+    },
+    "evan-sturm": {
+      "school": null,
+      "why": "",
+      "company": "Clancy & Theys"
+    },
+    "jeff-onsrud": {
+      "school": null,
+      "why": "",
+      "company": "C.R. Onsrud"
+    },
+    "linwood-scott-jr": {
+      "school": null,
+      "why": "",
+      "company": "Scott Farms"
+    },
+    "mark-duncan": {
+      "school": null,
+      "why": "Mark Duncan",
+      "company": "Duncan-Parnell"
+    },
+    "teddy-clancy": {
+      "school": null,
+      "why": "",
+      "company": "Clancy & Theys"
+    },
+    "tom-clancy": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Clancy & Theys"
+    },
+    "charlotte-vick": {
+      "school": null,
+      "why": "",
+      "company": "Vick Family Farms"
+    },
+    "frank-a-daniels-jr": {
+      "school": null,
+      "why": "rejected Frank Daniels",
+      "company": "The Pilot"
+    },
+    "lynwood-vick": {
+      "school": null,
+      "why": "",
+      "company": "Vick Family Farms"
+    },
+    "mac-campbell-jr": {
+      "school": null,
+      "why": "",
+      "company": "Campbell Oil"
+    },
+    "paul-stephens": {
+      "school": null,
+      "why": "rejected Paul Stephens",
+      "company": "Landmark Builders"
+    },
+    "ronald-scott-braswell-jr": {
+      "school": null,
+      "why": "",
+      "company": "Braswell Family Farms"
+    },
+    "anne-lindsay-beall": {
+      "school": null,
+      "why": "",
+      "company": "Fairfield"
+    },
+    "douglas-witcher": {
+      "school": null,
+      "why": "",
+      "company": "Smart Choice"
+    },
+    "joey-duncan": {
+      "school": null,
+      "why": "",
+      "company": "Dalco Nonwovens"
+    },
+    "mark-craig": {
+      "school": null,
+      "why": "rejected Mark Craig",
+      "company": "R.H. Barringer"
+    },
+    "richard-harkrader": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Solar Energy"
+    },
+    "ron-sherrill": {
+      "school": null,
+      "why": "",
+      "company": "SteelFab"
+    },
+    "bryan-dobson": {
+      "school": null,
+      "why": "rejected Bryan Dobson",
+      "company": "Quality Equipment"
+    },
+    "david-alexander": {
+      "school": null,
+      "why": "rejected David Alexander",
+      "company": "Home Run Markets"
+    },
+    "joel-t-clancy": {
+      "school": null,
+      "why": "",
+      "company": "Clancy & Theys"
+    },
+    "david-gardner": {
+      "school": null,
+      "why": "rejected David Gardner",
+      "company": "Cofounders Capital"
+    },
+    "promise-phelon": {
+      "school": null,
+      "why": "",
+      "company": "Growth Warrior Capital"
+    },
+    "david-king": {
+      "school": null,
+      "why": "rejected David King",
+      "company": "Shotwell Companies"
+    },
+    "khristian-gutierrez": {
+      "school": null,
+      "why": "",
+      "company": "Passport"
+    },
+    "markus-wilhelm": {
+      "school": null,
+      "why": "",
+      "company": "Strata Solar"
+    },
+    "donald-thompson": {
+      "school": null,
+      "why": "rejected Donald Thompson (Oklahoma politician)",
+      "company": "The Diversity Movement"
+    },
+    "frank-blythe": {
+      "school": null,
+      "why": "",
+      "company": "Blythe Development"
+    },
+    "jack-blythe": {
+      "school": null,
+      "why": "",
+      "company": "Blythe Development"
+    },
+    "james-harrell": {
+      "school": null,
+      "why": "rejected James Harrell",
+      "company": "Jernigan Oil"
+    },
+    "tim-henderson": {
+      "school": null,
+      "why": "",
+      "company": "Tempest Aero Group"
+    },
+    "alois-callemyn": {
+      "school": null,
+      "why": "",
+      "company": "Summit Design and Engineering Services"
+    },
+    "bob-siviglia": {
+      "school": null,
+      "why": "",
+      "company": "Toyota of North Charlotte"
+    },
+    "cam-mcrae": {
+      "school": null,
+      "why": "",
+      "company": "Tands"
+    },
+    "carson-harkrader": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Solar Energy"
+    },
+    "daniel-wayne": {
+      "school": null,
+      "why": "Wayne Daniel",
+      "company": "Wayne Brothers"
+    },
+    "ed-rose": {
+      "school": null,
+      "why": "rejected Ed Rose",
+      "company": "Shelco"
+    },
+    "eric-eubank-ii": {
+      "school": null,
+      "why": "",
+      "company": "Pamlico Capital"
+    },
+    "eric-wallace": {
+      "school": null,
+      "why": "Eric Wallace",
+      "company": "Wallace Farm"
+    },
+    "isaiah-wayne": {
+      "school": null,
+      "why": "",
+      "company": "Wayne Brothers"
+    },
+    "jim-parker": {
+      "school": null,
+      "why": "rejected Jim Parker (composer)",
+      "company": "Summit Design and Engineering Services"
+    },
+    "john-monteith": {
+      "school": null,
+      "why": "John Monteith",
+      "company": "Monteith Construction"
+    },
+    "linda-huff": {
+      "school": null,
+      "why": "",
+      "company": "H&H Homes"
+    },
+    "michael-riccobene": {
+      "school": null,
+      "why": "",
+      "company": "Riccobene Associates Family Dentistry"
+    },
+    "ray-grupinski": {
+      "school": null,
+      "why": "",
+      "company": "Precision Concepts International"
+    },
+    "richard-budd": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "The Budd Group"
+    },
+    "ryan-legg": {
+      "school": null,
+      "why": "",
+      "company": "MegaCorp Logistics"
+    },
+    "steve-payne": {
+      "school": null,
+      "why": "rejected Steve Payne",
+      "company": "Advanced Digital Cable"
+    },
+    "willy-stewart": {
+      "school": null,
+      "why": "",
+      "company": "Stewart"
+    },
+    "amy-jordan-dean": {
+      "school": null,
+      "why": "",
+      "company": "L.G. Jordan Oil & Gas"
+    },
+    "larry-jordan": {
+      "school": null,
+      "why": "Larry Jordan",
+      "company": "L.G. Jordan Oil & Gas"
+    },
+    "linwood-h-scott-iii": {
+      "school": null,
+      "why": "",
+      "company": "Scott Farms"
+    },
+    "lisa-cooper": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Mast General Store"
+    },
+    "michael-harrell": {
+      "school": null,
+      "why": "",
+      "company": "Jernigan Oil"
+    },
+    "mike-allen": {
+      "school": null,
+      "why": "rejected Mike Allen (journalist)",
+      "company": "Tempest Aero Group"
+    },
+    "tino-mcfarland": {
+      "school": null,
+      "why": "",
+      "company": "McFarland Construction"
+    },
+    "geoff-foster": {
+      "school": null,
+      "why": "rejected Geoff Foster",
+      "company": "Core Technology Molding"
+    },
+    "jim-bryan": {
+      "school": null,
+      "why": "rejected Jim Bryan",
+      "company": "Fairystone Fabrics"
+    },
+    "bob-anders": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "harrell-overman": {
+      "school": null,
+      "why": "",
+      "company": "Overman Farms"
+    },
+    "jerri-harrell": {
+      "school": null,
+      "why": "",
+      "company": "Jernigan Oil"
+    },
+    "kel-landis": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "lorenda-overman": {
+      "school": null,
+      "why": "",
+      "company": "Overman Farms"
+    },
+    "mike-becker": {
+      "school": null,
+      "why": "rejected Mike Becker",
+      "company": "Plexus Capital"
+    },
+    "robert-gefaell": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "roddey-player-sr": {
+      "school": null,
+      "why": "",
+      "company": "Queen City Homestore"
+    },
+    "tonya-foster": {
+      "school": null,
+      "why": "rejected Tonya Foster",
+      "company": "Core Technology Molding"
+    },
+    "dave-ousterout": {
+      "school": null,
+      "why": "",
+      "company": "Cape Fear BioCapital"
+    },
+    "bobby-cockerham": {
+      "school": null,
+      "why": "",
+      "company": "Winston Tractor"
+    },
+    "joe-siviglia": {
+      "school": null,
+      "why": "",
+      "company": "Toyota of North Charlotte"
+    },
+    "jud-bowman": {
+      "school": "North Carolina School of Science and Mathematics",
+      "why": "confirmed NCSSM alumnus",
+      "logo": "marks/north-carolina-school-of-science-and-mathematics.png"
+    },
+    "ralph-huff": {
+      "school": null,
+      "why": "",
+      "company": "H&H Homes"
+    },
+    "robert-moore": {
+      "school": null,
+      "why": "rejected Robert Moore",
+      "company": "Riley Outdoor"
+    },
+    "ingram-walters": {
+      "school": null,
+      "why": "",
+      "company": "Bob Mayberry Hyundai"
+    },
+    "missy-walters": {
+      "school": null,
+      "why": "",
+      "company": "Bob Mayberry Hyundai"
+    },
+    "robert-w-lackey-jr": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Protect Plus Air"
+    },
+    "ted-hall": {
+      "school": null,
+      "why": "rejected Ted Hall",
+      "company": "ShopBot Tools"
+    },
+    "jack-purcell": {
+      "school": null,
+      "why": "rejected Jack Purcell",
+      "company": "Ridgemont Equity Partners"
+    },
+    "john-shimp": {
+      "school": null,
+      "why": "",
+      "company": "Ridgemont Equity Partners"
+    },
+    "kurt-jacobus": {
+      "school": null,
+      "why": "",
+      "company": "restor3d"
+    },
+    "margaret-rudd-bishop": {
+      "school": null,
+      "why": "",
+      "company": "Margaret Rudd & Associates"
+    },
+    "paul-garofolo": {
+      "school": null,
+      "why": "",
+      "company": "Locus Biosciences"
+    },
+    "ravish-sachar": {
+      "school": null,
+      "why": "",
+      "company": "Contego Medical"
+    },
+    "rick-french": {
+      "school": null,
+      "why": "",
+      "company": "French/West/Vaughan"
+    },
+    "trey-sheridan": {
+      "school": null,
+      "why": "",
+      "company": "Ridgemont Equity Partners"
+    },
+    "walker-poole": {
+      "school": null,
+      "why": "",
+      "company": "Ridgemont Equity Partners"
+    },
+    "art-williams": {
+      "school": null,
+      "why": "Art Williams",
+      "company": "Williams Sand and Clay"
+    },
+    "bob-kingery": {
+      "school": null,
+      "why": "",
+      "company": "Southern Energy Management"
+    },
+    "brian-campbell": {
+      "school": null,
+      "why": "Brian Campbell",
+      "company": "Campbell Oil"
+    },
+    "carl-dean": {
+      "school": null,
+      "why": "",
+      "company": "L.G. Jordan Oil & Gas"
+    },
+    "chris-campbell": {
+      "school": null,
+      "why": "Chris Campbell",
+      "company": "Campbell Oil"
+    },
+    "dan-hooks": {
+      "school": null,
+      "why": "",
+      "company": "Party Reflections"
+    },
+    "david-taylor": {
+      "school": null,
+      "why": "David Taylor",
+      "company": "Bobby Taylor Oil"
+    },
+    "denise-legg": {
+      "school": null,
+      "why": "",
+      "company": "MegaCorp Logistics"
+    },
+    "drew-mcwilliams": {
+      "school": null,
+      "why": "",
+      "company": "Ivybrook Academy"
+    },
+    "ed-field": {
+      "school": null,
+      "why": "rejected Martin 'Ed' Ragain Field",
+      "company": "Cape Fear BioCapital"
+    },
+    "frances-player": {
+      "school": null,
+      "why": "",
+      "company": "Queen City Homestore"
+    },
+    "genna-zimmer": {
+      "school": null,
+      "why": "",
+      "company": "Reeds Jewelers"
+    },
+    "helen-smith": {
+      "school": null,
+      "why": "Helen Smith",
+      "company": "Smith Oil"
+    },
+    "jeff-kershaw": {
+      "school": null,
+      "why": "",
+      "company": "NC Filtration"
+    },
+    "kim-young": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Young & McQueen"
+    },
+    "maria-kingery": {
+      "school": null,
+      "why": "",
+      "company": "Southern Energy Management"
+    },
+    "mark-mcdowell": {
+      "school": null,
+      "why": "rejected Mark McDowell",
+      "company": "Charlotte Fund"
+    },
+    "mark-taylor": {
+      "school": null,
+      "why": "Mark Taylor",
+      "company": "Bobby Taylor Oil"
+    },
+    "mcqueen-campbell": {
+      "school": null,
+      "why": "",
+      "company": "Campbell Oil"
+    },
+    "trudy-hales": {
+      "school": null,
+      "why": "",
+      "company": "The Hales Group"
+    },
+    "turan-duda": {
+      "school": null,
+      "why": "",
+      "company": "Duda|Paine Architects"
+    },
+    "vamsee-pamula": {
+      "school": null,
+      "why": "",
+      "company": "Baebies"
+    },
+    "wesley-campbell": {
+      "school": null,
+      "why": "",
+      "company": "Campbell Oil"
+    },
+    "gail-engel": {
+      "school": null,
+      "why": "",
+      "company": "Motorcycles of Charlotte"
+    },
+    "john-cato": {
+      "school": null,
+      "why": "John Cato",
+      "company": "Cato Corp."
+    },
+    "matt-slaine": {
+      "school": null,
+      "why": "",
+      "company": "Quality Restaurant Group"
+    },
+    "ben-goldstein": {
+      "school": null,
+      "why": "",
+      "company": "CAPTRUST"
+    },
+    "wilson-hoyle-iii": {
+      "school": null,
+      "why": "",
+      "company": "CAPTRUST"
+    },
+    "mona-lisa-wallace": {
+      "school": null,
+      "why": "",
+      "company": "Wallace & Graham"
+    },
+    "ashish-achlerkar": {
+      "school": null,
+      "why": "",
+      "company": "NearU Services"
+    },
+    "darrin-hunter": {
+      "school": null,
+      "why": "",
+      "company": "Congruity HR"
+    },
+    "eddie-roberts": {
+      "school": null,
+      "why": "rejected Eddie Roberts",
+      "company": "Contractors Building Supply"
+    },
+    "howard-shope": {
+      "school": null,
+      "why": "",
+      "company": "International Express Trucking"
+    },
+    "john-cooling": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Components Group"
+    },
+    "john-mark-bolton": {
+      "school": null,
+      "why": "John Bolton (illustrator)",
+      "company": "ClearDefense Pest Control"
+    },
+    "josh-lyerly": {
+      "school": null,
+      "why": "",
+      "company": "Universal Distribution Group"
+    },
+    "justin-king": {
+      "school": null,
+      "why": "rejected Justin King",
+      "company": "Combined Caterers"
+    },
+    "keith-allison": {
+      "school": null,
+      "why": "rejected Keith Allison",
+      "company": "Systel Business Equipment"
+    },
+    "mark-dirks": {
+      "school": null,
+      "why": "",
+      "company": "Beacon Technologies"
+    },
+    "matt-lievens": {
+      "school": null,
+      "why": "",
+      "company": "Tax Protection Plus"
+    },
+    "matthew-smith": {
+      "school": null,
+      "why": "Matthew Smith",
+      "company": "Smith Excavating"
+    },
+    "sabine-randon": {
+      "school": null,
+      "why": "",
+      "company": "Eden Brothers"
+    },
+    "steve-mcdaniel": {
+      "school": null,
+      "why": "",
+      "company": "US Duct"
+    },
+    "tom-alexander": {
+      "school": null,
+      "why": "Tom Alexander (actor)",
+      "company": "JT Alexander & Son"
+    },
+    "dewey-scott": {
+      "school": null,
+      "why": "",
+      "company": "Scott Farms"
+    },
+    "eli-kershaw": {
+      "school": null,
+      "why": "",
+      "company": "NC Filtration"
+    },
+    "jeffrey-paine": {
+      "school": null,
+      "why": "",
+      "company": "Duda|Paine Architects"
+    },
+    "jennifer-mcwilliams": {
+      "school": null,
+      "why": "",
+      "company": "Ivybrook Academy"
+    },
+    "luke-blythe": {
+      "school": null,
+      "why": "",
+      "company": "Blythe Development"
+    },
+    "richard-west": {
+      "school": null,
+      "why": "rejected Richard West",
+      "company": "Baebies"
+    },
+    "brian-mahoney": {
+      "school": null,
+      "why": "rejected Brian Mahoney",
+      "company": "Prestige Corporate Development"
+    },
+    "cameron-edwards": {
+      "school": null,
+      "why": "Cameron Edwards",
+      "company": "Rent-A-John"
+    },
+    "deborah-taylor": {
+      "school": null,
+      "why": "Deborah Taylor",
+      "company": "D.K. Taylor Oil"
+    },
+    "erik-lensch": {
+      "school": null,
+      "why": "",
+      "company": "Leyline Renewable Capital"
+    },
+    "laura-ballance": {
+      "school": null,
+      "why": "Laura Ballance",
+      "company": "Merge Records"
+    },
+    "mac-mccaughan": {
+      "school": null,
+      "why": "Mac McCaughan",
+      "company": "Merge Records"
+    },
+    "thomas-goforth": {
+      "school": null,
+      "why": "",
+      "company": "Absolute Collision Center"
+    },
+    "tim-matt": {
+      "school": null,
+      "why": "",
+      "company": "Triple-T Truck Centers"
+    },
+    "billy-smith": {
+      "school": null,
+      "why": "Billy Ray Smith",
+      "company": "Smith Oil"
+    },
+    "christian-eastman": {
+      "school": null,
+      "why": "",
+      "company": "Party Reflections"
+    },
+    "david-leonhardt": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Leonhardt Pipe & Supply"
+    },
+    "janice-noyes": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Coast Harley-Davidson"
+    },
+    "johnny-taylor-jr": {
+      "school": null,
+      "why": "Little Johnny Taylor",
+      "company": "Bobby Taylor Oil"
+    },
+    "michael-vadini": {
+      "school": null,
+      "why": "Michael Alan Vadini",
+      "company": "Glew"
+    },
+    "ray-hales": {
+      "school": null,
+      "why": "",
+      "company": "The Hales Group"
+    },
+    "rick-noyes": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Coast Harley-Davidson"
+    },
+    "sam-young": {
+      "school": null,
+      "why": "dropped same-name page",
+      "company": "Young & McQueen"
+    },
+    "mark-engel": {
+      "school": null,
+      "why": "rejected Mark Engel",
+      "company": "Motorcycles of Charlotte"
+    },
+    "david-spratte": {
+      "school": null,
+      "why": "",
+      "company": "Carpe"
+    },
+    "kasper-kubica": {
+      "school": null,
+      "why": "",
+      "company": "Carpe"
+    },
+    "tor-hansen": {
+      "school": null,
+      "why": "",
+      "company": "Yep Roc and related labels"
+    },
+    "alex-bean": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "brad-pence": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "carl-hill": {
+      "school": null,
+      "why": "Carl Hill",
+      "company": "RS&A"
+    },
+    "diane-bohan": {
+      "school": null,
+      "why": "",
+      "company": "HCN Petroleum Equipment"
+    },
+    "emily-smith": {
+      "school": null,
+      "why": "Emily Smith",
+      "company": "Smith Equipment Solutions"
+    },
+    "jay-jester": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "jeff-schwenneker": {
+      "school": null,
+      "why": "",
+      "company": "Schwenn Services & Contracting"
+    },
+    "jeffrey-shelton": {
+      "school": null,
+      "why": "",
+      "company": "Foothill Waste Solutions"
+    },
+    "jeffry-schwenneker": {
+      "school": null,
+      "why": "",
+      "company": "Schwenn Services & Contracting"
+    },
+    "kenneth-wolff": {
+      "school": null,
+      "why": "",
+      "company": "RS&A"
+    },
+    "mark-holden": {
+      "school": null,
+      "why": "rejected Mark Holden",
+      "company": "Professional Maintenance & Equipment"
+    },
+    "melissa-sutherland": {
+      "school": null,
+      "why": "",
+      "company": "Combined Caterers"
+    },
+    "mike-townley": {
+      "school": null,
+      "why": "",
+      "company": "CREO"
+    },
+    "nicholas-byrd": {
+      "school": null,
+      "why": "",
+      "company": "Harbinger Homes"
+    },
+    "steven-holden": {
+      "school": null,
+      "why": "",
+      "company": "Professional Maintenance & Equipment"
+    },
+    "susan-acker-walsh": {
+      "school": null,
+      "why": "",
+      "company": "CREO"
+    },
+    "tom-townes": {
+      "school": null,
+      "why": "",
+      "company": "Triad Commercial Properties"
+    },
+    "tripp-beacham": {
+      "school": null,
+      "why": "",
+      "company": "BB+M Architecture"
+    },
+    "will-anders": {
+      "school": null,
+      "why": "",
+      "company": "Plexus Capital"
+    },
+    "roger-braswell": {
+      "school": null,
+      "why": "",
+      "company": "Southern Shade Tree"
+    },
+    "wyatt-tucker": {
+      "school": null,
+      "why": "",
+      "company": "Parks Heating Cooling Plumbing & Electrical"
+    },
+    "aaron-blythe": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Energy Systems"
+    },
+    "brian-herring": {
+      "school": null,
+      "why": "",
+      "company": "Harbinger Homes"
+    },
+    "christian-ludwig": {
+      "school": null,
+      "why": "rejected Christian Ludwig",
+      "company": "Aruza Pest Control"
+    },
+    "gary-bullard": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Air and Carolina Power"
+    },
+    "wil-smith": {
+      "school": null,
+      "why": "",
+      "company": "Smith Equipment Solutions"
+    },
+    "michael-capps": {
+      "school": null,
+      "why": "rejected Michael Capps (politician)",
+      "company": "Diveplane"
+    },
+    "ginger-dosier": {
+      "school": null,
+      "why": "Ginger Krieg Dosier",
+      "company": "BioMason"
+    },
+    "ben-williams": {
+      "school": null,
+      "why": "Ben Williams",
+      "company": "Williams Sand and Clay"
+    },
+    "jeannine-buscher": {
+      "school": null,
+      "why": "",
+      "company": "FedUp Foods"
+    },
+    "kate-player": {
+      "school": null,
+      "why": "",
+      "company": "Queen City Homestore"
+    },
+    "leah-wong-ashburn": {
+      "school": null,
+      "why": "",
+      "company": "Highland Brewing"
+    },
+    "roddey-player-jr": {
+      "school": null,
+      "why": "",
+      "company": "Queen City Homestore"
+    },
+    "russell-estes": {
+      "school": null,
+      "why": "",
+      "company": "Peak Farms"
+    },
+    "will-williams": {
+      "school": null,
+      "why": "Will Williams",
+      "company": "Williams Sand and Clay"
+    },
+    "chad-parker": {
+      "school": null,
+      "why": "",
+      "company": "Gensler"
+    },
+    "christopher-chuang": {
+      "school": null,
+      "why": "",
+      "company": "Relay"
+    },
+    "ashley-christensen": {
+      "school": null,
+      "why": "Ashley Christensen",
+      "company": "AC Restaurants"
+    },
+    "jordan-schindler": {
+      "school": null,
+      "why": "",
+      "company": "Nufabrx"
+    },
+    "sarah-mullins": {
+      "school": null,
+      "why": "",
+      "company": "FedUp Foods"
+    },
+    "vinton-fountain": {
+      "school": null,
+      "why": "",
+      "company": "Fountain Financial Associates"
+    },
+    "anne-givan": {
+      "school": null,
+      "why": "",
+      "company": "Waste Disposal Solutions"
+    },
+    "doug-cullen": {
+      "school": null,
+      "why": "",
+      "company": "Contemporary Concepts"
+    },
+    "glenn-dicker": {
+      "school": null,
+      "why": "",
+      "company": "Yep Roc and related labels"
+    },
+    "russ-labelle": {
+      "school": null,
+      "why": "",
+      "company": "Wilmington Machinery"
+    },
+    "tom-blanchard": {
+      "school": null,
+      "why": "rejected Tom Blanchard",
+      "company": "Sterling Technology Solutions"
+    },
+    "chris-bohan": {
+      "school": null,
+      "why": "",
+      "company": "HCN Petroleum Equipment"
+    },
+    "hap-royster": {
+      "school": null,
+      "why": "",
+      "company": "Triad Commercial Properties"
+    },
+    "justin-shelton": {
+      "school": null,
+      "why": "",
+      "company": "Foothill Waste Solutions"
+    },
+    "kenny-strickland": {
+      "school": null,
+      "why": "",
+      "company": "Highland Construction"
+    },
+    "larry-tilley": {
+      "school": null,
+      "why": "",
+      "company": "ACME Plumbing"
+    },
+    "lige-daughtridge": {
+      "school": null,
+      "why": "",
+      "company": "Daughtridge Sales Company"
+    },
+    "richard-lewis": {
+      "school": null,
+      "why": "",
+      "company": "MegaChem"
+    },
+    "robby-white-sr": {
+      "school": null,
+      "why": "",
+      "company": "R.D. White & Sons"
+    },
+    "jay-raffaldini": {
+      "school": null,
+      "why": "",
+      "company": "Raffaldini Vineyards"
+    },
+    "jim-dunn": {
+      "school": null,
+      "why": "",
+      "company": "Verger Capital Management"
+    },
+    "reid-smith": {
+      "school": null,
+      "why": "",
+      "company": "RiverWild"
+    },
+    "boyd-campbell": {
+      "school": null,
+      "why": "",
+      "company": "Southeastern Biomedical Associates"
+    },
+    "brian-bunce": {
+      "school": null,
+      "why": "",
+      "company": "BB+M Architecture"
+    },
+    "carmen-vadini": {
+      "school": null,
+      "why": "",
+      "company": "Glew"
+    },
+    "chance-delcastillo": {
+      "school": null,
+      "why": "",
+      "company": "Southern Ice Cream and Gourmet Foods"
+    },
+    "chris-mitchell": {
+      "school": null,
+      "why": "",
+      "company": "Piedmont Door Solutions"
+    },
+    "eric-ward": {
+      "school": null,
+      "why": "",
+      "company": "AgBiome"
+    },
+    "james-wyatt-iii": {
+      "school": null,
+      "why": "",
+      "company": "Wyatt & Blake"
+    },
+    "manning-garrett": {
+      "school": null,
+      "why": "",
+      "company": "Green Hill Fence"
+    },
+    "patricia-burdick": {
+      "school": null,
+      "why": "",
+      "company": "GoldStar Storage Container & Trailer Rentals"
+    },
+    "phil-kelley-jr": {
+      "school": null,
+      "why": "",
+      "company": "Salem One"
+    },
+    "roger-manley": {
+      "school": null,
+      "why": "",
+      "company": "BB+M Architecture"
+    },
+    "scott-holcombe": {
+      "school": null,
+      "why": "",
+      "company": "Autograph Cabinetry & Design"
+    },
+    "scott-mahoney": {
+      "school": null,
+      "why": "",
+      "company": "Salem One"
+    },
+    "scott-uknes": {
+      "school": null,
+      "why": "",
+      "company": "AgBiome"
+    },
+    "ann-estes": {
+      "school": null,
+      "why": "",
+      "company": "Peak Farms"
+    },
+    "david-woronoff": {
+      "school": null,
+      "why": "",
+      "company": "The Pilot"
+    },
+    "frank-daniels-iii": {
+      "school": null,
+      "why": "",
+      "company": "The Pilot"
+    },
+    "jaclyn-smith": {
+      "school": null,
+      "why": "",
+      "company": "RiverWild"
+    },
+    "jimmy-melton": {
+      "school": null,
+      "why": "",
+      "company": "Cape Fear BioCapital"
+    },
+    "nikin-shah": {
+      "school": null,
+      "why": "",
+      "company": "Front Porch Venture Partners"
+    },
+    "jami-daniels": {
+      "school": null,
+      "why": "",
+      "company": "Ernest"
+    },
+    "todd-eveson": {
+      "school": null,
+      "why": "",
+      "company": "Gaeta and Eveson"
+    },
+    "anna-lynch": {
+      "school": null,
+      "why": "",
+      "company": "Lynch Mykins"
+    },
+    "loran-evans": {
+      "school": null,
+      "why": "",
+      "company": "Rightline Gear"
+    },
+    "steve-shelton": {
+      "school": null,
+      "why": "",
+      "company": "Fence Builders"
+    },
+    "usman-noor": {
+      "school": null,
+      "why": "",
+      "company": "8MSolar"
+    },
+    "tom-rhoads": {
+      "school": null,
+      "why": "",
+      "company": "Spencer Health Solutions"
+    },
+    "greg-johnson": {
+      "school": null,
+      "why": "",
+      "company": "Southeastern Biomedical Associates"
+    },
+    "adam-feinberg": {
+      "school": null,
+      "why": "",
+      "company": "Web Deals Direct"
+    },
+    "anthony-musselwhite": {
+      "school": null,
+      "why": "",
+      "company": "Sellware"
+    },
+    "bob-marsh": {
+      "school": null,
+      "why": "",
+      "company": "Gelder & Associates"
+    },
+    "curtis-shillingburg": {
+      "school": null,
+      "why": "",
+      "company": "RidgeRock Retaining Walls"
+    },
+    "don-pesta": {
+      "school": null,
+      "why": "",
+      "company": "Pesta Finnie"
+    },
+    "emil-solimine": {
+      "school": null,
+      "why": "",
+      "company": "Mainlining America"
+    },
+    "howard-russell": {
+      "school": null,
+      "why": "",
+      "company": "Wilmington Rubber & Gasket"
+    },
+    "jean-bohn": {
+      "school": null,
+      "why": "",
+      "company": "Simply Fresh"
+    },
+    "jim-martin": {
+      "school": null,
+      "why": "",
+      "company": "RidgeRock Retaining Walls"
+    },
+    "jon-clayton": {
+      "school": null,
+      "why": "",
+      "company": "AutoglassCRM"
+    },
+    "kim-delcastillo": {
+      "school": null,
+      "why": "",
+      "company": "Southern Ice Cream and Gourmet Foods"
+    },
+    "leigh-ann-burdick": {
+      "school": null,
+      "why": "",
+      "company": "GoldStar Storage Container & Trailer Rentals"
+    },
+    "mark-snyder": {
+      "school": null,
+      "why": "",
+      "company": "Dirtworks Rail of the Carolinas"
+    },
+    "michael-tedesco": {
+      "school": null,
+      "why": "",
+      "company": "Appraisal Nation"
+    },
+    "mike-mattachione": {
+      "school": null,
+      "why": "",
+      "company": "Mattachione Construction"
+    },
+    "mike-shook": {
+      "school": null,
+      "why": "",
+      "company": "5S Technologies"
+    },
+    "nick-neonakis": {
+      "school": null,
+      "why": "",
+      "company": "FranDevCo"
+    },
+    "pat-keane": {
+      "school": null,
+      "why": "",
+      "company": "Piedmont Door Solutions"
+    },
+    "woodrow-wright": {
+      "school": null,
+      "why": "",
+      "company": "Amerochem"
+    },
+    "jeannie-lucas": {
+      "school": null,
+      "why": "",
+      "company": "Lucas Research"
+    },
+    "seth-medlin": {
+      "school": null,
+      "why": "",
+      "company": "Lucas Research"
+    },
+    "scott-tollett": {
+      "school": null,
+      "why": "",
+      "company": "Victra"
+    },
+    "bret-morey": {
+      "school": null,
+      "why": "",
+      "company": "Elijah's Xtreme"
+    },
+    "don-dempsey": {
+      "school": null,
+      "why": "",
+      "company": "Yellow Dog Design"
+    },
+    "elijah-morey": {
+      "school": null,
+      "why": "",
+      "company": "Elijah's Xtreme"
+    },
+    "greg-blaser": {
+      "school": null,
+      "why": "",
+      "company": "Turf Service Inc."
+    },
+    "jennifer-miller": {
+      "school": null,
+      "why": "rejected Jennifer Miller",
+      "company": "Threadline Products"
+    },
+    "john-jarvis": {
+      "school": null,
+      "why": "rejected John Jarvis",
+      "company": "PARC design lab"
+    },
+    "lynn-yeager": {
+      "school": null,
+      "why": "",
+      "company": "Precision Garage Door, Raleigh and Fayetteville"
+    },
+    "meredith-bradshaw": {
+      "school": null,
+      "why": "",
+      "company": "K&M Collision"
+    },
+    "rhonda-lee": {
+      "school": null,
+      "why": "rejected Rhonda Lee Quaresma",
+      "company": "Alarmguard Security"
+    },
+    "sherrod-banks": {
+      "school": null,
+      "why": "",
+      "company": "Banks Law Group"
+    },
+    "stephanie-daniel": {
+      "school": null,
+      "why": "",
+      "company": "Kenneth Daniel Roofing"
+    },
+    "jack-andrews": {
+      "school": null,
+      "why": "rejected Jack Andrews",
+      "company": "The Pilot"
+    },
+    "lee-dirks": {
+      "school": null,
+      "why": "",
+      "company": "The Pilot"
+    },
+    "daniel-furches": {
+      "school": null,
+      "why": "",
+      "company": "Red's Home & Garden"
+    },
+    "dave-julku": {
+      "school": null,
+      "why": "",
+      "company": "RCI Doors"
+    },
+    "eric-grindley": {
+      "school": null,
+      "why": "",
+      "company": "Esquire Advertising"
+    },
+    "kevin-bradshaw": {
+      "school": null,
+      "why": "rejected Kevin Bradshaw",
+      "company": "K&M Collision"
+    },
+    "lee-amos": {
+      "school": null,
+      "why": "rejected Amos Lee",
+      "company": "Master Plumbers Heating and Cooling"
+    },
+    "mike-kilpatrick": {
+      "school": null,
+      "why": "",
+      "company": "STG Solar"
+    },
+    "cynthia-p-martin": {
+      "school": null,
+      "why": "rejected Cynthia Martin",
+      "company": "The Colonial Group"
+    },
+    "greg-gill": {
+      "school": null,
+      "why": "",
+      "company": "Gentry Air"
+    },
+    "gregory-t-headen": {
+      "school": null,
+      "why": "",
+      "company": "The Colonial Group"
+    },
+    "jason-l-haupt": {
+      "school": null,
+      "why": "",
+      "company": "The Colonial Group"
+    },
+    "jason-wood": {
+      "school": null,
+      "why": "rejected Jason Wood",
+      "company": "New Dimensions in Pavement Markings"
+    },
+    "john-graham": {
+      "school": null,
+      "why": "rejected John Graham",
+      "company": "Mountain Air Mechanical Contractors"
+    },
+    "nolan-eller": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Comfort Heating & Air Conditioning"
+    },
+    "scott-anderson": {
+      "school": null,
+      "why": "rejected Scott Anderson",
+      "company": "Carolina Comfort Heating & Air Conditioning"
+    },
+    "tonia-cison": {
+      "school": null,
+      "why": "",
+      "company": "Mac Heating & Air Conditioning"
+    },
+    "bill-fahrner": {
+      "school": null,
+      "why": "",
+      "company": "Credo"
+    },
+    "clint-rogers": {
+      "school": null,
+      "why": "",
+      "company": "Triangle Collision"
+    },
+    "doug-templeton": {
+      "school": null,
+      "why": "rejected Doug Templeton",
+      "company": "Power Test"
+    },
+    "hollis-marshall": {
+      "school": null,
+      "why": "",
+      "company": "Matt Marshall & Co."
+    },
+    "james-lee": {
+      "school": null,
+      "why": "rejected James Lee",
+      "company": "Alarmguard Security"
+    },
+    "jeffery-bottomley": {
+      "school": null,
+      "why": "",
+      "company": "PARC design lab"
+    },
+    "josh-miller": {
+      "school": null,
+      "why": "rejected Josh Miller (education)",
+      "company": "Threadline Products"
+    },
+    "kenneth-daniel": {
+      "school": null,
+      "why": "Kenneth Daniel",
+      "company": "Kenneth Daniel Roofing"
+    },
+    "mike-dempsey": {
+      "school": null,
+      "why": "Mike Dempsey (graphic designer)",
+      "company": "Yellow Dog Design"
+    },
+    "mike-fillion": {
+      "school": null,
+      "why": "",
+      "company": "NC Pest Control"
+    },
+    "mike-jaggers": {
+      "school": null,
+      "why": "",
+      "company": "Armor Fire Services"
+    },
+    "ray-comer": {
+      "school": null,
+      "why": "",
+      "company": "Turf Service Inc."
+    },
+    "robbie-roberts": {
+      "school": null,
+      "why": "",
+      "company": "Joe Van Gogh"
+    },
+    "terry-nobles-jr": {
+      "school": null,
+      "why": "",
+      "company": "Nobles Insurance Agency"
+    },
+    "thomas-saunders": {
+      "school": null,
+      "why": "rejected Thomas Saunders",
+      "company": "Piedmont Electric Motor Repair"
+    },
+    "tim-yeager": {
+      "school": null,
+      "why": "",
+      "company": "Precision Garage Door, Raleigh and Fayetteville"
+    },
+    "travis-byrd": {
+      "school": null,
+      "why": "",
+      "company": "Central Air"
+    },
+    "jerome-trehy": {
+      "school": null,
+      "why": "",
+      "company": "Roland Black Heating and Cooling"
+    },
+    "andy-bayliss": {
+      "school": null,
+      "why": "",
+      "company": "Tab Premium Built Homes"
+    },
+    "jeff-kincaid": {
+      "school": null,
+      "why": "",
+      "company": "The Jeff Kincaid Insurance Agency"
+    },
+    "rob-belk": {
+      "school": null,
+      "why": "",
+      "company": "Sales Factory"
+    },
+    "ryan-pratt": {
+      "school": null,
+      "why": "",
+      "company": "Guerrilla RF"
+    },
+    "beau-estes": {
+      "school": null,
+      "why": "",
+      "company": "Peak Farms"
+    },
+    "jamie-bartholomaus": {
+      "school": null,
+      "why": "",
+      "company": "Foothills Brewing"
+    },
+    "nathan-duggins": {
+      "school": null,
+      "why": "",
+      "company": "Tuggle Duggins"
+    },
+    "carol-graham": {
+      "school": null,
+      "why": "rejected Carol Graham",
+      "company": "Mountain Air Mechanical Contractors"
+    },
+    "cyrus-mojdehi": {
+      "school": null,
+      "why": "",
+      "company": "Northway Homes"
+    },
+    "dean-inkelaar": {
+      "school": null,
+      "why": "",
+      "company": "AAA City Plumbing"
+    },
+    "jennifer-gill": {
+      "school": null,
+      "why": "",
+      "company": "Gentry Air"
+    },
+    "lane-riley": {
+      "school": null,
+      "why": "",
+      "company": "Happy Home Services"
+    },
+    "mark-mccarson": {
+      "school": null,
+      "why": "",
+      "company": "Mac Heating & Air Conditioning"
+    },
+    "mark-michel": {
+      "school": null,
+      "why": "",
+      "company": "Landmark Landscape Services"
+    },
+    "matt-hord": {
+      "school": null,
+      "why": "",
+      "company": "The Plumbing & Air Service Company"
+    },
+    "robert-w-burke": {
+      "school": null,
+      "why": "rejected Robert O'Hara Burke",
+      "company": "The Colonial Group"
+    },
+    "shannon-wood": {
+      "school": null,
+      "why": "",
+      "company": "New Dimensions in Pavement Markings"
+    },
+    "ted-williams": {
+      "school": null,
+      "why": "rejected Ted Williams",
+      "company": "Charlotte Agenda"
+    },
+    "ric-flair": {
+      "school": null,
+      "why": "Ric Flair",
+      "company": "Ric Flair Drip"
+    },
+    "allan-bass": {
+      "school": null,
+      "why": "",
+      "company": "Bass Air Conditioning"
+    },
+    "bryan-edwards": {
+      "school": null,
+      "why": "rejected Bryan Edwards (judge)",
+      "company": "Ideal Services Heating & Cooling"
+    },
+    "connie-tator": {
+      "school": null,
+      "why": "",
+      "company": "The Little Gym franchises"
+    },
+    "danny-wilson": {
+      "school": null,
+      "why": "rejected Danny Wilson (band)",
+      "company": "Movin' On Movers"
+    },
+    "dwayne-wilson": {
+      "school": null,
+      "why": "",
+      "company": "Dwayne Wilson Insurance & Financial Services"
+    },
+    "geoff-ricks": {
+      "school": null,
+      "why": "",
+      "company": "Policyline Insurance"
+    },
+    "heidi-seitz": {
+      "school": null,
+      "why": "",
+      "company": "Epic Physical Therapy"
+    },
+    "matt-kaylor": {
+      "school": null,
+      "why": "",
+      "company": "sold to Landscape Workshop"
+    },
+    "matt-ketterman": {
+      "school": null,
+      "why": "",
+      "company": "Got You Floored"
+    },
+    "mel-black": {
+      "school": null,
+      "why": "",
+      "company": "BrightPath Education Services"
+    },
+    "michael-mccall": {
+      "school": null,
+      "why": "",
+      "company": "sold to Atlantic OBX"
+    },
+    "stephen-beacham": {
+      "school": null,
+      "why": "",
+      "company": "sold to Columbia Home Services"
+    },
+    "tom-o-brien": {
+      "school": null,
+      "why": "",
+      "company": "Accu Copy of Greenville"
+    },
+    "ged-king": {
+      "school": null,
+      "why": "",
+      "company": "Sales Factory"
+    },
+    "jaron-cayton": {
+      "school": null,
+      "why": "",
+      "company": "TeamLogic IT, Raleigh franchise"
+    },
+    "paige-byrne": {
+      "school": null,
+      "why": "",
+      "company": "Prep"
+    },
+    "bruce-tyler": {
+      "school": null,
+      "why": "",
+      "company": "Weldon Mills Distillery"
+    },
+    "kelly-pfyffer": {
+      "school": null,
+      "why": "",
+      "company": "Prosciutto\u2019s"
+    },
+    "michael-hinderliter": {
+      "school": null,
+      "why": "",
+      "company": "Weldon Mills Distillery"
+    },
+    "brenda-harris": {
+      "school": null,
+      "why": "",
+      "company": "Apple Crate Naturals"
+    },
+    "afrique-kilimanjaro": {
+      "school": null,
+      "why": "",
+      "company": "Carolina Peacemaker"
+    },
+    "aidan-byrne": {
+      "school": null,
+      "why": "",
+      "company": "Prep"
+    },
+    "karin-kassab": {
+      "school": null,
+      "why": "",
+      "company": "Clarity Counseling Center"
+    },
+    "marty-cayton": {
+      "school": null,
+      "why": "",
+      "company": "TeamLogic IT, Raleigh franchise"
+    },
+    "neena-saha": {
+      "school": null,
+      "why": "",
+      "company": "Elemeno"
+    },
+    "wendy-maguire": {
+      "school": null,
+      "why": "",
+      "company": "Hope Services"
+    },
+    "greg-collier": {
+      "school": null,
+      "why": "",
+      "company": "Bayhaven Restaurant Group"
+    },
+    "joel-pfyffer": {
+      "school": null,
+      "why": "",
+      "company": "Prosciutto\u2019s"
+    },
+    "chrystal-jones": {
+      "school": null,
+      "why": "",
+      "company": "Jones Caf\u00e9"
+    },
+    "cindy-fischmann": {
+      "school": null,
+      "why": "",
+      "company": "United Water Restoration Group of Charlotte"
+    },
+    "derek-colson": {
+      "school": null,
+      "why": "",
+      "company": "Prosciutto\u2019s"
+    },
+    "robert-fischmann": {
+      "school": null,
+      "why": "",
+      "company": "United Water Restoration Group of Charlotte"
+    },
+    "chris-zieber": {
+      "school": null,
+      "why": "",
+      "company": "Appalachian Mountain Brewery"
+    }
+  }
+}

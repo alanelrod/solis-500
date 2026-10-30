@@ -79,7 +79,8 @@
     .own.rank td.worth.provisional span { color: #5eead4; }
     .own.rank td.worth.priced span { color: #fbbf24; }
     .rank-name { font-weight: 650; }
-    .ncssm-mark { height: 18px; width: auto; margin-left: 6px; vertical-align: -3px; }
+    .school-mark { height: 22px; width: auto; max-width: 34px; object-fit: contain; margin-right: 6px; vertical-align: middle; }
+    td.pos { white-space: nowrap; }
     .rank-panel { display: grid; grid-template-columns: 1.45fr 0.9fr; gap: 28px; padding: 4px 8px 18px 3rem; }
     .rank-panel p { margin: 0 0 8px; max-width: 68ch; }
     .rank-panel .tie { color: var(--muted); font-size: 13px; }
@@ -341,7 +342,7 @@
         ? parts
         : people.map((person) => {
             const match = parts.find((part) => part.pos === person.position);
-            return { name: person.name, value: worthOf(person), pos: person.position, color: match ? match.color : otherColor, ncssm: person.ncssm };
+            return { name: person.name, value: worthOf(person), pos: person.position, color: match ? match.color : otherColor };
           });
       legendRows.forEach((part) => {
         const li = document.createElement("li");
@@ -350,13 +351,6 @@
         const label = document.createElement("span");
         label.innerHTML = `<span class="swatch" style="background:${part.color || otherColor}"></span>`;
         label.append(document.createTextNode(part.name));
-        if (part.ncssm) {
-          const mark = document.createElement("img");
-          mark.className = "ncssm-mark";
-          mark.src = "ncssm.png";
-          mark.alt = "";
-          label.append(mark);
-        }
         const amount = document.createElement("span");
         amount.textContent = money(part.value);
         button.append(label, amount);
@@ -630,7 +624,14 @@
       row.className = "rank-row";
       const rank = document.createElement("td");
       rank.className = "pos";
-      rank.textContent = String(person.rank);
+      if (person.school_logo) {
+        const mark = document.createElement("img");
+        mark.className = "school-mark";
+        mark.src = person.school_logo;
+        mark.alt = person.school_name || "";
+        rank.append(mark);
+      }
+      rank.append(document.createTextNode(String(person.rank)));
       const move = movementText(person);
       if (move) {
         const mark = document.createElement("span");
@@ -641,13 +642,6 @@
       const name = document.createElement("td");
       name.className = "rank-name";
       name.textContent = person.name;
-      if (person.ncssm) {
-        const mark = document.createElement("img");
-        mark.className = "ncssm-mark";
-        mark.src = "ncssm.png";
-        mark.alt = "NCSSM";
-        name.append(mark);
-      }
       const worth = document.createElement("td");
       worth.textContent = money(worthOf(person));
       const age = document.createElement("td");
@@ -762,7 +756,17 @@
       openPos = ranked[0].position;
       render();
     }
-    fetch("data/top500.json").then((res) => res.json()).then((body) => {
+    Promise.all([
+      fetch("data/top500.json").then((res) => res.json()),
+      fetch("data/education.json").then((res) => res.ok ? res.json() : { matches: {} })
+    ]).then(([body, edu]) => {
+      const matches = (edu && edu.matches) || {};
+      body.people.forEach((person) => {
+        const row = matches[person.id];
+        if (!row || !row.logo) return;
+        person.school_name = row.school;
+        person.school_logo = row.logo;
+      });
       if (body.snapshot) {
         showRanking(body.people, body.headline);
         return;
